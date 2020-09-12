@@ -1,0 +1,1448 @@
+/* 
+    @规则：
+         @charset    设置样式表的编码
+         @import     导入其他样式文件
+         @media      媒体查询
+         @font-face  自定义字体
+ */
+
+/* 导入reset.css样式文件 */
+@import 'reset.css';
+
+/* 导入字体样式 */
+/* @font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), 
+         url('../font/iconfont.woff2') format('woff2'), 
+         url('../font/iconfont.woff') format('woff'), 
+         url('../font/iconfont.ttf') format('truetype'), 
+         url('../font/iconfont.svg#iconfont') format('svg');
+} */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* ---header顶部页头------------------------------------------------------------------------- */
+/* -- header顶部页头 -- */
+#header{
+    width: 100%;
+    padding-top: 6px;
+    position: relative;
+    background-color: #fff;
+}
+#header::before{
+    content: "";
+    height: 6px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(to left,rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+/* -- 顶部导航栏版心区域, 1190px -- */
+#header .container{
+    width: 1190px;
+    height: 61px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#header::after{
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+/* -- logo--标题--280*60 --*/
+#header .container .logo{
+    position: relative;
+    width: 200px;
+    height: 60px;
+}
+#header .container .logo a {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background-image: url(../images/bluelogo.png);
+    /* 图片比例4:1 */
+    background-size: 180px 45px;  
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+/* -- 中间导航--600*60 -- */
+#header .container .navigation{
+    width: 720px;
+    height: 60px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}#header .container .navigation ul{
+    padding: 0 10px;
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#header .container .navigation ul li{
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+#header .container .navigation ul li a{
+    box-shadow: 0px 0px 5px 1px rgba(10, 10, 10, 0.1);
+    display: inline-block;
+    margin: 12px 5px;
+    padding: 0 6px;
+    font-size: 15px;
+    width: 80px;
+    line-height: 36px;
+    border-radius: 6px;
+}
+#header .container .navigation ul li:hover a{
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+    color: #2988FF;
+    transition: .3s;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* -- 右侧--搜索和时间轴---200*60 -- */
+#header .container .right-nav{
+    position: relative;
+    height: 100%;
+    float: right;
+    width: 220px;
+    overflow: hidden;
+}
+#header .container .right-nav ul li{
+    float: right;
+    box-sizing: border-box;
+    height: 60px;
+    text-align: center;
+    overflow: hidden;
+}
+#header .container .right-nav ul li i{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 10px 5px;
+    color: #999;
+}
+#header .container .right-nav ul li a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+#header .container .right-nav ul li:hover a{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+#header .container .right-nav ul li a span{
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* 留言部分 */
+.liuyan{
+    position: relative;
+    width: 800px;
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.liuyan:hover{
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.6);
+}
+.ly-p{
+    padding: 15px 10px 10px 10px;
+    text-indent: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+.ly-p .nickname, .ly-p .msgtips{
+    font-weight: normal;
+    font-size: 13px;
+    color: red;
+}
+.ly-p span.lyTips{
+    color: red;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.liuyan input[type="text"]{
+    box-sizing: border-box;
+	width: 690px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 30px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.liuyan textarea {
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 690px;
+    margin: 0 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #999;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+.liuyan input[type="submit"] {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid transparent;
+    color: #2988FF;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 3px;
+    border-radius: 6px;
+	cursor: pointer;
+}
+.liuyan input[type="submit"]:hover {
+	position: relative;
+	background: #f6f6f6;
+    color: #2988FF;
+    background-color: #2988FF;
+    border: 1px solid #2988FF;
+    color: #fff;
+    transition: 0.2s;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.liuyanban{
+    position: relative;
+    width: 900px;
+    margin: 10px auto;
+    padding: 10px 50px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    box-sizing: border-box;
+}
+.liuyanban h3{
+    font-size: 20px;
+    color: #2988FF;
+    padding: 10px;
+    border-bottom: 2px solid #999;
+    background-image: url(../images/tiao.gif);
+    background-position: 100px;
+    background-repeat: no-repeat;
+}
+
+.liuyanban .datalist .divlist{
+    border-radius: 3px;
+    padding: 5px 10px;
+    /* background-color: #fff; */
+    margin: 15px 0;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.liuyanban .datalist .divlist:hover{
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.liuyanban .datalist dt{
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    color: #555;
+}
+.liuyanban .datalist dd{
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    min-height: 30px;
+	line-height: 20px;
+    text-indent: 2em;
+}
+.liuyanban .datalist tt{
+    color: rgb(99, 155, 240);
+}
+
+
+
+
+/* ---article区域---------------------------------------------------------------- */
+/* -- article中间区域 -- */
+#container{
+    width: 1190px;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* -- article区域topBox部分 -- */
+.topBox{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 15px 0;
+}
+.bannnerBox{
+    float: left;
+    width: 890px;
+    height: 280px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+/* -----时间部分---- */
+.showTime{
+    width: 880px;
+    height: 60px;
+    text-align: left;
+    background: url(../images/bg-title.png);
+    background-size: 880px;
+    background-position: 213px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+.showTime .presentTime{
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #111;
+    padding-left: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+/* 昵称部分 */
+.bgPic{
+    position: relative;
+    margin-top: 10px;
+    width: 880px;
+    height: 220px;
+    border-radius: 0;
+    background-color: rgb(50, 170, 250);
+    background: url(../images/title-yellow.png);
+    background-size: 880px;
+    background-position: 0px 24px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.bgPic .tiao{
+    position: absolute;
+    width: 230px;
+    height: 60px;
+    top: 158px;
+    border-radius: 0;
+    border-bottom: 3px solid red;
+    background-image: url(../images/tiao.gif);
+    background-position: center;
+
+}
+.bgPic .melikui{
+    position: absolute;
+    left: 62px;
+    top: 64px;
+    width: 200px;
+    height: 65px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 65px;
+}
+.chageSize30{
+    position: absolute;
+    left: 80px;
+    top: 73px;
+    font-size: 30px;
+}
+.chageSize40{
+    position: absolute;
+    left: 72px;
+    top: 66px;
+    font-size: 40px;
+}
+.bgPic .melikui span{
+    padding-left: 25px;
+}
+
+/* <!-- 个人名片部分 --> */
+.topBox-right{
+    float: right;
+    width: 300px;
+    height: 280px;
+    background-image: url(../images/sun.jpg);
+    background-size: 88px 88px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: #fff;
+}
+.idCard{
+    position: relative;
+    float: right;
+    width: 300px;
+    height: 280px;
+    overflow: hidden;
+}
+.idCard h2{
+    font-size: 20px;
+    color: #666;
+    font-weight: normal;
+    padding: 12px 0px 0px 30px;
+}
+.idCard p{
+    width: 230px;
+    height: 30px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 1px 0 1px 10px;
+    font-size: 13px;
+    color: black;
+    line-height: 30px;
+    margin: 10px 0px 10px 30px;
+    transition: all 0.3s;
+}
+.idCard p:hover{
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.idCard .linkmore{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 6px 28px;
+}
+.idCard .linkmore li{
+    float: left;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.idCard .linkmore li a{
+    /* background-color: blue; */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    
+}
+.idCard .linkmore li:hover a{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.idCard .linkmore li:hover .toolTipImage{
+    visibility: visible;
+}
+/* 提示工具 */
+.idCard .linkmore li .toolTipImage{
+    position: absolute;
+    top: -110px;
+    left: -25px;
+    visibility: hidden;
+    width: 88px;
+    height: 88px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.idCard .linkmore li .toolTipImage img{
+    width: 88px;
+    height: 88px;
+    border-radius: 6px;
+}
+
+
+
+/* <!-- 中间--左侧--部分 --> */
+#container .leftBox{
+    width: 875px;
+    box-sizing: border-box;
+}
+
+/* -- 魔方显示部分-- */
+.centerBox-mofang{
+    width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+/* -- 轮播图部分 -- */
+.lunbotuBox{
+    position: relative;
+    margin: 0px 10px 15px 0;
+    width: 875px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.lunbotu{
+    width: 875px;
+    height: 420px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.lunbotu .sliderPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 420px;
+    width: 5250px;
+}
+.lunbotu .sliderPage li {
+    width: 875px;
+    height: 420px;
+    float: left;
+}
+.lunbotu .sliderPage li img {
+    width: 100%;
+    height: 100%;
+}
+.lunbotu .btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    top: 50%;
+    margin-top: -25px;
+    opacity: 0.1;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.lunbotu:hover .btn {
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.lunbotu .leftBtn {
+    left: 15px;
+}
+
+.lunbotu .rightBtn {
+    right: 15px;
+}
+.lunbotu .sliderIndex {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+.lunbotu .sliderIndex span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.lunbotu .sliderIndex .active {
+    background-color: #33C9FF;
+}
+/* -----天气部分--------- */
+.tqbox {
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -150px;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 10;
+}
+.tqbox:hover {
+    background-color: rgb(0, 0, 0, 0.6);
+    transition: all 0.3s;
+}
+.tqbox p.tqtips{
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.tqbox:hover .u5 li p {
+    background-color: rgba(245, 243, 243, 0.1);
+}
+.tqbox h3{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.tqbox > p{
+    text-align: l;
+    font-size: 12px;
+    margin: 6px 0;
+}
+.tqbox img {
+    width: 100%;
+    height: 100%;
+}
+
+.tqbox ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1px;
+}
+
+.tqbox .u3 li {
+    width: 80px;
+    height: 20px;
+    padding: 3px;
+    margin: 3px 0;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.tqbox .u5{
+    padding-bottom: 2px;
+    border-radius: 3px;
+}
+.tqbox .u5 li {
+    width: 95px;
+    font-size: 8px;
+    margin: 5px;
+}
+
+.tqbox .u5 li:nth-of-type(1) {
+    border-top: 2px solid rgba(0, 153, 255, 0.836);
+}
+
+.tqbox .u5 li:nth-of-type(2) {
+    border-top: 2px solid rgb(6, 240, 57);
+}
+
+.tqbox .u5 li:nth-of-type(3) {
+    border-top: 2px solid rgb(238, 255, 0);
+}
+
+.tqbox .u5 li:nth-of-type(4) {
+    border-top: 2px solid rgb(250, 111, 18);
+}
+
+.tqbox .u5 li:nth-of-type(5) {
+    border-top: 2px solid rgb(255, 0, 212);
+}
+.tqbox .u5 li p {
+    margin-top: 5px;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: all 0.3s;
+    color: white;
+    font-size: 11px;
+}
+
+/* 导航列表部分 */
+.leibie{
+    height: 100%;
+    width: 1185px;
+    /* background-color: #fff; */
+    margin: 10px 0 0 0;
+    border-radius: none;
+    border-left: 5px solid #999;
+    background-color: #fff;
+    /* border-radius: 3px; */
+    margin-bottom: 15px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    
+}
+.leibie ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    position: relative;
+}
+.leibie ul li{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 3px 1px inset rgba(0, 0, 0, 0.3); */
+    text-align: center;
+
+}
+.leibie ul li:hover{
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.6);
+}
+.leibie ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+}
+.leibie ul li:nth-of-type(1) a{
+    background-color: rgba(6, 129, 245, 0.5);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(1) a:hover{
+    background-color: rgba(1, 127, 245, 0.9);
+}
+.leibie ul li:nth-of-type(2) a{
+    background-color: rgba(9, 250, 21, 0.5);
+    color: #666;
+}
+.leibie ul li:nth-of-type(2) a:hover{
+    background-color: rgba(9, 250, 21, 0.9);
+}
+.leibie ul li:nth-of-type(3) a{
+    background-color: rgba(247, 11, 247, 0.5);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(3) a:hover{
+    background-color: rgba(247, 11, 247, 0.9);
+}
+.leibie ul li:nth-of-type(4) a{
+    background-color: rgba(249, 253, 5, 0.5);
+    color: #666;
+}.leibie ul li:nth-of-type(4) a:hover{
+    background-color: rgba(249, 253, 5, 0.9);
+}
+.leibie ul li:nth-of-type(5) a{
+    background-color: rgba(245, 6, 6, 0.5);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(5) a:hover{
+    background-color: rgba(245, 6, 6, 0.9);
+}
+.leibie ul li:nth-of-type(6) a{
+    background-color: rgba(6, 213, 250, 0.5);
+    color: #666;
+}
+.leibie ul li:nth-of-type(6) a:hover{
+    background-color: rgba(6, 213, 250, 0.9);
+}
+.leibie ul li:nth-of-type(7) a{
+    background-color: rgba(149, 6, 245, 0.5);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(7) a:hover{
+    background-color: rgba(149, 6, 245, 0.9);
+}
+.leibie ul li:nth-of-type(8) a{
+    background-color: rgba(250, 103, 6, 0.5);
+    color: #666;
+}
+.leibie ul li:nth-of-type(8) a:hover{
+    background-color: rgba(250, 103, 6, 0.9);
+}
+
+.rizhi{
+    box-sizing: border-box;
+    margin-top: 10px;
+    width: 875px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.rizhi .biaoqian{
+    width: 100%;
+    margin-bottom: 6px;
+}
+.rizhi .biaoqian span{
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-right: 6px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #999;
+}
+.rizhi .biaoqian span:nth-of-type(1){
+    background-color: #FF5E5C;
+}
+.rizhi .biaoqian span:nth-of-type(2){
+    background-color: #19B5FE;
+}
+.rizhi .biaoqian span:nth-of-type(3){
+    background-color: #1AC756;
+}
+.rizhi .biaoqian span:nth-of-type(4){
+    background-color: #F669F6;
+}
+.rizhi .biaoqian span:nth-of-type(5){
+    background-color: #F8A066;
+}
+
+.rizhi h3{
+    font-weight: normal;
+    margin: 10px 0;
+}
+.rizhi h3 a{
+    font-size: 18px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+#container .rizhi h3 a:hover{
+    color:#2988FF;
+}
+.rizhi .rz-img{
+    margin: 5px 0;
+}
+.rizhi .rz-img ul{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.rizhi .rz-img ul li{
+    background-color: #555;
+    width: 200px;
+    height: 120px;
+    margin: 6px 6px 0 0;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.rizhi .rz-img ul li img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.rizhi .rz-img ul li img:hover{
+    width: 240px;
+    height: 144px;
+    left: -20px;
+    top: -12px;
+}
+.rizhi p{
+    margin: 6px 0;
+    font-size: 15px;
+    text-indent: 2em;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rizhi .author{
+    width: 100%;
+    height: 36px;
+    margin-top: 15px;
+}
+.rizhi .author img{
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 1px;
+    width: 32px;
+    height: 32px;
+    vertical-align: center;
+    margin-right: 5px;
+}
+.rizhi .author span{
+    padding: 0 3px;
+    margin-right: 10px;
+    line-height: 36px;
+    color: #666;
+}
+
+
+/* 中间博客部分----------------------------------------------------------------- */
+.leftBox .bloglist{
+    position: relative;
+    padding: 15px;
+    width: 845px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.leftBox .bloglist .title{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+}
+.leftBox .bloglist ul li{
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #999;
+    position: relative;
+}
+
+.leftBox .bloglist ul li span img{
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    float: left;
+    margin: 0 10px 0 0;
+    background-color: #fff;
+}
+.leftBox .bloglist ul li p.text{
+    height: 110px;
+    margin-left: 250px;
+    text-indent: 2em;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.leftBox .bloglist ul li .user{
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.leftBox .bloglist ul li .user img{
+    float: left;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+.leftBox .bloglist ul li .user span{
+    margin-right: 10px;
+}
+.leftBox .bloglist ul li .user span.time{
+    color: #999;
+}
+.leftBox .bloglist ul li .btn{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 0 10px 0 10px;
+    color: #fff;
+    border-radius: 6px;
+    background-color: #2988FF;
+    box-shadow: 0px 5px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.leftBox .bloglist ul li .btn span{
+    position: relative;
+    transition: 0.3s;
+    line-height: 30px;
+}
+.leftBox .bloglist ul li .btn span::after{
+    content: "»";
+    position: relative;
+    font-size: 15px;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.3s;
+}
+.leftBox .bloglist ul li .btn:hover span::after{
+    opacity: 1;
+    right: -5px;
+}
+.leftBox .bloglist ul li .btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.leftBox .bloglist ul li .user span a{
+    color: #2988FF;
+}
+
+
+/* 博客页码 */
+.bloglist ul.blogpage{
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+    /* background-color: #bfa; */
+}
+.bloglist ul.blogpage li{
+    border: none;
+}
+.bloglist ul.blogpage li a:hover{
+    color: #2988FF;
+    transition: all 0.2s ease;
+}
+/* 中间博客预览部分----------------------------------------------------------------- */
+.view{
+    padding: 20px 15px;
+    border-radius: 3px;
+}
+.view h3.ctitle{
+    border-bottom: 1px solid #666;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.view div{
+    padding: 3px 0;
+    font-size: 15px;
+}
+.view .view-author {
+    height: 30px;
+    margin-top: 5px;
+}
+.view .view-author img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: center;
+}
+.view .view-author span{
+    margin: 0 6px;
+    font-size: 12px;
+}
+/* 评论区------------------------- */
+
+.view .comments .comments-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1.5px solid #ddd;
+}
+.view .comments .comments-top .commentsTips{
+    color: red;
+    line-height: 28px;
+}
+.view .comments .pinglun{
+    height: 100px;
+    display: flex;
+    padding: 0;
+    border-radius: 5px;
+}
+.view .comments .pinglun #messageContent{
+    resize: none;
+    flex: 9;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 15px;
+    border-right: none;
+}
+.view .comments .pinglun #messageBtn{
+    flex: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #2988FF;
+    font-size: 17px;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.view .comments .pinglun #messageBtn:hover{
+    color: #f4f4f4;
+    border: 1px solid #2988FF;
+    background-color: #2988FF;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+.view .comments .comments-content {
+    text-align: right;
+}
+.view .comments .commentstxt{
+    margin: 10px 0;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    border-radius: 3px;
+}
+.view .comments .commentstxt p{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+.view .comments .commentstxt span{
+    width: 100%;
+    font-size: 11px;
+}
+
+
+
+
+
+/* 留言页码 */
+.commentlist ul.commentpage{
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+    /* background-color: #bfa; */
+}
+.commentlist ul.commentpage li{
+    border: none;
+}
+.commentlist ul.commentpage li a:hover{
+    color: #2988FF;
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!----------------- 中间--右侧--部分 ------------------------------------------> */
+#container .rightBox{
+    width: 300px;
+    box-sizing: border-box;
+}
+/* <!-- 搜索和导航栏目 --> */
+#container .rightBox .search-nav{
+    /* position: relative; */
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+#container .rightBox .search-nav .icon{
+    font-size: 20px;
+}
+#container .rightBox .search-nav .top input{
+    position: relative;
+    width: 180px;
+    height: 21px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    outline: none;
+    padding: 3px;
+    text-indent: 3px;
+}
+#container .rightBox .search-nav .top .btn{
+    height: 31px;
+    padding: 2px 12px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #2988FF;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 5px;
+    position: relative;
+    top: 1.5px;
+    box-shadow:none;
+}
+#container .rightBox .search-nav .top .btn:hover{
+    background-color: #2988FF;
+    border: 1px solid #2988FF;
+    color: #fff;
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#container .rightBox .search-nav h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 1px;
+}
+#container .rightBox .search-nav h3 i{
+    margin-left: 5px;
+}
+#container .rightBox .search-nav ul{
+    padding: 10px 0px 0px 10px;
+    height: 100%;
+    overflow: hidden;
+}
+#container .rightBox .search-nav ul li{
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 30px;
+    margin: 0px 15px 15px 0;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 1, 0.1);
+}
+#container .rightBox .search-nav ul li a{
+    display: inline-block;
+    line-height: 30px;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+}
+#container .rightBox .search-nav ul li a:hover{
+    color: white;
+    transition: 0.2s;
+    background-color: #2988FF;
+}
+#container .rightBox .search-nav ul li .focus{
+    background-color: #2988FF;
+    color: white;
+}
+#container .rightBox .search-nav ul li:hover{
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* <!-- 工具推荐和最近笔记 --> */
+#container .rightBox .recommend{
+    background-color: #fff;
+    padding: 15px 15px 10px 15px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+#container .rightBox .recommend .icon{
+    font-size: 20px;
+}
+#container .rightBox .recommend h3::after{
+    content: "";
+    width: 160px;
+    height: 2px;
+    background: url(../images/dian.jpg) repeat-x;
+    display: inline-block;
+    margin: 5px 0;
+}
+#container .rightBox .recommend h3 i{
+    background-color: #fff;
+    width: 60px;
+    padding-right: 6px;
+}
+#container .rightBox .recommend ul{
+    margin: 10px 0 10px 0;
+}
+#container .rightBox .recommend ul li{
+    position: relative;
+    margin: 10px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#container .rightBox .recommend ul li a{
+    font-size: 13px;
+}
+#container .rightBox .recommend ul li a:hover{
+    color: #2988FF;
+    text-decoration: underline; 
+    transition: 0.2s;
+}
+
+
+/* ----底部部分--------------------------------------------------------------- */
+/* -- footer底部页脚部分 -- */
+#footer::before{
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+/* #footer::after{
+    content: "";
+    height: 6px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(to left, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+} */
+#footer{
+    width: 100%;
+    position: relative;
+}
+/* -- 页脚可编辑部分 -- */
+#footer .box{
+    clear: both;
+	margin: 0px auto;
+	text-align: center;
+    color: rgb(58, 56, 56);
+}
+#footer .ftop{
+    padding: 15px 0 5px 0;
+}
+#footer .fbottom{
+    padding:5px 0 20px 0;
+}
+#footer .box div{
+    font-size: 13px;
+}
+#footer .box a{
+    font-size: 12px;
+    color: rgb(78, 70, 70);
+}
+#footer .box span{
+    margin: 3px;
+}
+#footer .box span.big{
+    color: black;
+    font-size: 14px;
+}
+#footer .box i{
+    padding: 1px;
+}
+#footer .box div.webRunTime{
+    color: black;
+    font-size: 14px;
+}
+
+
+/*  登录框 */
+div.loginBox{
+    position: fixed;
+    left: 0;
+    top:  0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+div.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    top:  50%;
+    margin-left: -150px;
+    margin-top: -160px;
+    border-radius: 6px;
+    width: 300px;
+    height: 320px;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #19B5FE;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);
+}
+.login ul{
+    margin: 10px auto;
+    padding: 10px;
+}
+.login ul li{
+    width: 222px;
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.login ul li span{
+    color: red;
+    font-size: 14px;
+}
+.login ul li:nth-child(2){
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.login ul li:nth-child(2):hover{
+    border: 1px solid #63a8fc;
+}
+.login ul li:nth-child(4){
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.login ul li:nth-child(4):hover{
+    border: 1px solid #63a8fc;
+}
+.login ul li input{
+    padding: 0 5px;
+    width: 212px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+.loginBox .loginTips{
+    position: absolute;
+    font-size: 14px;
+    color: red;
+    bottom: 20px;
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.login ul li button{
+    width: 88px;
+    height: 35px;
+    outline: none;
+    border: none;
+    margin: 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #2988FF;
+    font-size: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    
+}
+.login ul li button:nth-child(1){
+    float: left;
+}
+.login ul li button:nth-child(2){
+    float: right;
+}
+.login ul li button:hover{
+    background-color: #2988FF;
+    color: #fff;
+}

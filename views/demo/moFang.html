@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block demo %}
+<link rel="stylesheet" href="/public/css/mofang.css">
+<script src="/public/js/bg.js"></script>
+    <canvas id="bgCanvas"></canvas>
+    <!-- 中间部分 -->
+    <div class="wbox">
+        <div class="black"></div>
+        <div class="dragDiv">
+            <div id="dragBox">
+                <div class="yuanquan"></div>
+            <div class="wrapper">
+                <div id="mofang" class="xbox"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="/public/js/createmf.js"></script>
+    <script src="/public/js/drag.js"></script>
+{% endblock %}

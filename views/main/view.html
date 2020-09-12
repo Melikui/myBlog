@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+{% block main %}
+<link rel="stylesheet" href="/public/meditor/css/editormd.css" />
+<script src="/public/meditor/editormd.min.js"></script>
+
+<!-- article区域-左侧--部分 -->
+<div class="leftBox fl clearfix">
+    <!-- <div id="markdownBody" class="markdown-body editormd-preview-container"></div> -->
+    <!-- 中间博客部分 -->
+    <div class="view boxshaw clearfix">
+        <h3 class="ctitle">{{content.title}}</h3>
+        <div id="contentHtml" style="display: none;">{{content.content}}</div>
+        <div id="markdownBody" class="markdown-body editormd-preview-container"></div>
+        <div class="view-author">
+            <img src="/public/images/lk.jpg" alt="">
+            <span>Melikui</span>
+            <span><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-biji7"></use>
+              </svg>发表时间：{{ content.addTime|date('Y-m-d') }}</span>
+            <span><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-watched"></use>
+              </svg>浏览量：{{content.views}}</span>
+              <span><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-liuyan2"></use>
+            </svg>评论数：{{content.comments.length}}</span>
+        </div>
+        <!-- 评论区---------------------- -->
+        <div class="comments">
+            <div class="comments-top">
+                <h3>评论区</h3>
+                <span class="commentsTips"></span>
+                <div class="comment-data">一共n条评论</div>
+            </div>
+            <div class="pinglun">
+                <textarea id="messageContent" placeholder="这里留言..."></textarea>
+                <input type="hidden" id="contentId" value="{{content.id}}">
+                <button id="messageBtn">提&nbsp;交</button>
+            </div>
+            <div class="comments-content">
+                <div class="commentstxt">
+                    <p>留言内容</p>
+                    <span>留言时间</span>
+                    <p class="messageBox">还没有留言~</p>
+                </div>
+            </div>
+        </div>
+        <div class="commentlist clearfix">
+            <ul class="commentpage">
+                <li class="previous">
+                    <a href="">上一页</a>
+                </li>
+                <li>此分类暂无内容</li>
+                <li class="next">
+                    <a href="">下一页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!-- article区域--右侧--部分 -->
+<div class="rightBox fr">
+    <!-- 搜索框 -->
+    <div class="search-nav boxshaw clearfix">
+        <div class="top">
+            <input type="text" placeholder="JavaScript"><button class="btn">搜 索</button>
+        </div>
+    </div>
+    <div class="search-nav boxshaw clearfix">
+        <!------- 笔记分类 ------->
+        <h3>
+            <span class="iconfont">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xuexi1"></use>
+                </svg>
+            </span>
+            <i>笔记分类</i>
+        </h3>
+        <ul>
+            {%for cate in categories%}
+                {%if category == cate.id %}
+                <li><a class="focus" href="/notes/?category={{cate.id}}">{{cate.name}}</a></li>
+                {%else%}
+                <li><a href="/notes/?category={{cate.id}}">{{cate.name}}</a></li>
+                {%endif%}
+            {%endfor%}
+        </ul>
+    </div>
+    <!-- 工具推荐 -->
+    <div class="recommend boxshaw clearfix">
+        <h3>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jian"></use>
+                </svg>
+            </span>
+            <i>工具推荐</i>
+        </h3>
+        <ul>
+            <li><a href="https://www.npmjs.cn/">npm 中文文档 | npm 中文网</a></li>
+            <li><a href="https://tool.lu/favicon/">favicon制作 - 在线工具</a></li>
+            <li><a href="http://www.aigei.com/">爱给网_音效配乐_3D模型_视频素材_游戏素材_免费下载</a></li>
+            <li><a href="https://www.caniuse.com/">Can I use... Support tables for HTML5, CSS3, etc</a></li>
+            <li><a
+                    href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">Iconfont-阿里巴巴矢量图标库</a>
+            </li>
+            <li><a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">NPM镜像-NPM下载地址-NPM安装教程-阿里巴巴开源镜像站</a>
+            </li>
+            <li><a href="https://leetcode-cn.com/">力扣（LeetCode）官网 - 全球极客挚爱的技术成长平台</a></li>
+            <li><a href="https://www.babeljs.cn/">Babel 中文网 · Babel - 下一代 JavaScript 语法的编译器</a></li>
+            <li><a href="http://code.z01.com/emmet/">Emmet-HTML/CSS代码自动补全语法</a></li>
+            <li><a href="https://cn.wordpress.org/download/">下载 | WordPress.org China 简体中文</a></li>
+            <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考 -
+                    JavaScript | MDN</a></li>
+        </ul>
+    </div>
+    
+</div>
+<script src="/public/js/view.js"></script>
+{% endblock %}

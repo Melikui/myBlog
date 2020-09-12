@@ -1,0 +1,377 @@
+{% extends 'layout.html' %}
+{% block main %}
+<link rel="stylesheet" href="/public/css/smofang.css">
+<!-- article区域topBox部分 -->
+<div class="topBox clearfix boxshaw">
+    <div class="bannnerBox">
+        <!-- 时间显示部分 -->
+        <div class="showTime">
+            <div class="presentTime">2020年03月10日 星期二 00:00:00</div>
+        </div>
+        <div class="bgPic">
+            <div class="tiao"></div>
+            <span class="chageSize40" id="iconFontSize"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xin1"></use>
+                </svg></span>
+            <div class="melikui">
+                <span>2020</span>
+            </div>
+        </div>
+    </div>
+    <!-- 我的名片 -->
+    <div class="topBox-right clearfix">
+        <!-- 我的名片 -->
+        <div class="idCard clearfix">
+            <h2>我的名片</h2>
+            <p>姓名：李魁</p>
+            <p>职业：前端开发</p>
+            <p>现居：安徽-合肥</p>
+            <p>Email：280284023@qq.com</p>
+            <ul class="linkmore">
+                <li><a href="https://github.com/Melikui" title="Github">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a></li>
+                <li class="toolTip"><a href="https://blog.csdn.net/Melikui" class="iconfont" title="CSDN博客">
+                        <span class="toolTipImage"><img src="/public/images/CSDN.png" alt=""></span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-csdn"></use>
+                        </svg>
+                    </a></li>
+                <li class="toolTip"><a href="#" class="iconfont" title="微信">
+                        <span class="toolTipImage"><img src="/public/images/weixin.png" alt=""></span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weixin"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="https://user.qzone.qq.com/280284023" class="iconfont" title="QQ号">
+                        <span class="toolTipImage"><img src="/public/images/qq.png" alt=""></span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-qq-icon"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="mailto:280284023@qq.com" class="iconfont" title="邮箱">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-youxiang7"></use>
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 导航分类部分 -->
+<div class="boxshaw leibie clearfix">
+    <ul>
+        <li><a href="">资&nbsp;讯</a></li>
+        <li><a href="">影&nbsp;视</a></li>
+        <li><a href="/public/Demo/Music/music.html">音&nbsp;乐</a></li>
+        <li><a href="/saolei">游&nbsp;戏</a></li>
+        <li><a href="/demo/moFang">魔&nbsp;方</a></li>
+        <li><a href="/demo/rotatePhotos">照片墙</a></li>
+        <li><a href="/public/Demo/相册/photo.html">相&nbsp;册</a></li>
+        <li><a href="">归&nbsp;档</a></li>
+    </ul>
+</div>
+<!-- article区域-左侧--部分 -->
+<div class="leftBox fl clearfix">
+    <!-- 魔方和轮播图部分 -->
+    <div class="displayBox">
+        <!-- 轮播图部分 -->
+        <div class="boxshaw lunbotuBox">
+            <!-- 天气显示部分 -->
+            <div class="tqbox clearfix">
+                <h3 class="tqdz">地址</h3>
+                <p class="tqkqsp">空气水平</p>
+                <p class="tqtips">Tips</p>
+                <ul class="u3">
+                    <li class="tqwd">温度</li>
+                    <li class="tqwea">天气</li>
+                    <li class="tqwin">风力</li>
+                </ul>
+                <ul class="u5">
+                    <li class="tqday">今天</li>
+                    <li class="tqday">明天</li>
+                    <li class="tqday">后天</li>
+                    <li class="tqday">大后天</li>
+                    <li class="tqday">最后天</li>
+                </ul>
+            </div>
+            <script src="/public/js/tianqi.js"></script>
+            <!-- 轮播图部分 -->
+            <div class="lunbotu">
+                <ul class="sliderPage">
+                    <li>
+                        <img src="/public/images/lb1.jfif" />
+                    </li>
+                    <li>
+                        <img src="/public/images/lb2.jfif" />
+                    </li>
+                    <li>
+                        <img src="/public/images/lb3.jpg" />
+                    </li>
+                    <li>
+                        <img src="/public/images/lb4.jfif" />
+                    </li>
+                    <li>
+                        <img src="/public/images/lb5.jfif" />
+                    </li>
+                    <li>
+                        <img src="/public/images/lb1.jfif" />
+                    </li>
+                </ul>
+                <div class="btn leftBtn">&lt;</div>
+                <div class="btn rightBtn">&gt;</div>
+                <div class="sliderIndex">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <script src="/public/js/lunbotu.js"></script>
+        </div>
+    </div>
+
+    <!-- 日志部分 -->
+    <div class="rizhi boxshaw clearfix">
+        <div class="biaoqian">
+            <span>努力</span>
+            <span>旅游</span>
+            <span>学习</span>
+            <span>心情</span>
+            <span>成长</span>
+        </div>
+        <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a></h3>
+        <div class="rz-img clearfix">
+            <ul>
+                <li><img src="/public/images/rizhi-1.jfif"></li>
+                <li><img src="/public/images/rizhi-2.jfif"></li>
+                <li><img src="/public/images/rizhi-3.jfif"></li>
+                <li><img src="/public/images/rizhi-4.jfif"></li>
+                <li><img src="/public/images/rizhi-5.jfif"></li>
+                <li><img src="/public/images/rizhi-6.jfif"></li>
+                <li><img src="/public/images/rizhi-7.jfif"></li>
+                <li><img src="/public/images/rizhi-8.jfif"></li>
+            </ul>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus e
+            a quo dicta eaque omnis dolore explicabo accusamus debitis natus sunt
+            harum, impedit ex reiciendis delectus quas praesentium... </p>
+        <div class="author">
+            <img src="/public/images/lk.jpg" alt="">
+            <div class="auth">
+                <span>Melikui</span>
+                <span><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-rizhi2"></use>
+                  </svg>&nbsp;成长</span>
+                <span><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-biji7"></use>
+                  </svg>&nbsp;2020-05-10</span>
+                <span><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-watched"></use>
+                  </svg>&nbsp;666</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 中间博客部分 -->
+    <div class="bloglist boxshaw clearfix">
+        <h2 class="title">最新博文</h2>
+        <ul>
+            <li>
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ding2"></use>
+                        </svg>
+                    </span>
+                    <a href="/view?contentid={{content.id}}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a>
+                </h3>
+                <span>
+                    <img src="/public/images/user5.jpg" alt="">
+                </span>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus
+                    ea quo dicta eaque omnis dolore explicabo accusamus debitis natus sunt harum, impedit ex
+                    reiciendis delectus quas praesentium quaerat rem assumenda, facere molestiae. Error
+                    quibusdam est ducimus quam minus, dicta excepturi quae corporis. Quia, explicabo. Ipsum
+                    incidunt facere inventore molestiae esse obcaecati odio, ex voluptates nemo suscipit
+                    quibusdam, reprehenderit dolorem alias magni. Neque mollitia est earum magnam. Tenetur earum
+                    ea consequatur repudiandae voluptas, neque exercitationem mollitia architecto id, provident
+                    et accusamus at rem dolor minus voluptates. Rem inventore dolores repellat officia. A ipsum
+                    distinctio nulla cumque doloremque, repudiandae odio ratione!</p>
+                <p class="user">
+                    <i><a href="#"><img src="/public/images/lk.jpg" alt="头像"></a></i>
+                    <span class="time">2020-6-30</span>
+                    <!-- 收藏 -->
+                    <span>【<a href="">个人博客</a>】</span>
+                    <span class="like common"><a href="#" title="收藏">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-soucangdianji"></use>
+                            </svg>(666)
+                        </a></span>
+                    <!-- 评论 -->
+                    <span class="pinglun common"><a href="#" title="评论">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-liuyan2"></use>
+                            </svg>(999)
+                        </a></span>
+                    <!-- 点赞 -->
+                    <span class="zan common"><a href="#" title="点赞">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-tuijian"></use>
+                            </svg>
+                        </a>(333)</span>
+                    <a href="/view?contentid={{content.id}}" class="btn fr"><span>展开阅读</span></a>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!-- article区域--右侧--部分 -->
+<div class="rightBox fr">
+    <!-- 小魔方部分 -->
+    <div class="boxshaw centerBox-mofang">
+        <div class="wbox">
+            <div id="demo" class="wrapper">
+                <div id="mofang" class="xbox"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/public/js/createmf.js"></script>
+    <script src="/public/js/mofang.js"></script>
+    <!-- 搜索框 -->
+    <div class="search-nav boxshaw clearfix">
+        <div class="top">
+            <input type="text" placeholder="JavaScript"><button class="btn">搜 索</button>
+        </div>
+    </div>
+    <!-- 学习导航 -->
+    <div class="search-nav boxshaw clearfix">
+        <h3>
+            <span class="iconfont">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-lianhe"></use>
+                </svg>
+            </span>
+            <i>学习导航</i>
+        </h3>
+        <ul>
+            <li><a href="https://www.w3school.com.cn/html/index.asp">HTML</a></li>
+            <li><a href="http://css.doyoe.com/">CSS</a></li>
+            <li><a href="https://www.jquery123.com/">jQuery</a></li>
+            <li><a href="https://www.bootcss.com/">Bootstrap</a></li>
+            <li><a href="https://less.bootcss.com/">Less</a></li>
+            <li><a href="https://www.sasscss.com/">Sass</a></li>
+            <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">JavaScript</a></li>
+            <li><a href="https://typescript.bootcss.com/">TypeScript</a></li>
+            <li><a href="https://es6.ruanyifeng.com/">ES6</a></li>
+            <li><a href="https://cn.vuejs.org/v2/guide/">Vue.js</a></li>
+            <li><a href="https://reactjs.bootcss.com/">React.js</a></li>
+            <li><a href="https://angular.cn/start">Angular.jS</a></li>
+            <li><a href="https://www.nodeapp.cn/">Node.js</a></li>
+            <li><a href="https://git-scm.com/book/zh/v2">Git</a></li>
+            <li><a href="https://www.webpackjs.com/">webpack</a></li>
+            <li><a href="https://www.runoob.com/mongodb/mongodb-tutorial.html">MongoDB</a></li>
+            <li><a href="https://www.runoob.com/ajax/ajax-tutorial.html">Ajax</a></li>
+            <li><a href="https://www.runoob.com/markdown/md-tutorial.html">Markdown</a></li>
+        </ul>
+    </div>
+    <!-- 笔记分类 -->
+    <div class="search-nav boxshaw clearfix">
+        <!-- 笔记分类部分 -->
+        <h3>
+            <span class="iconfont">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xuexi1"></use>
+                </svg>
+            </span>
+            <i>笔记分类</i>
+        </h3>
+        <ul>
+            {%for category in categories%}
+            <li><a href="/">{{category.name}}</a></li>
+            {%endfor%}
+        </ul>
+    </div>
+    <!-- 模拟练习 -->
+    <div class="search-nav boxshaw clearfix">
+        <!-- 小demo部分 -->
+        <h3>
+            <span class="iconfont">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-lanmudaohang-dianji"></use>
+                </svg>
+            </span>
+            <i>模拟练习</i>
+        </h3>
+        <ul>
+            <li><a href="/demo/moFang">旋转魔方</a></li>
+            <li><a href="/saolei">扫雷游戏</a></li>
+            <li><a href="/demo/rotatePhotos">旋转照片墙</a></li>
+            <li><a href="/public/Demo/淘宝首页/index.html">淘宝首页</a></li>
+            <li><a href="/public/Demo/马蜂窝首页/index.html">马蜂窝首页</a></li>
+            <li><a href="/public/Demo/相册/photo.html">相册</a></li>
+            <li><a href="/public/Demo/Music/music.html">音乐</a></li>
+        </ul>
+
+    </div>
+    
+    <!-- 工具推荐 -->
+    <div class="recommend boxshaw clearfix">
+        <h3>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jian"></use>
+                </svg>
+            </span>
+            <i>工具推荐</i>
+        </h3>
+        <ul>
+            <li><a href="https://www.npmjs.cn/">npm 中文文档 | npm 中文网</a></li>
+            <li><a href="https://tool.lu/favicon/">favicon制作 - 在线工具</a></li>
+            <li><a href="http://www.aigei.com/">爱给网_音效配乐_3D模型_视频素材_游戏素材_免费下载</a></li>
+            <li><a href="https://www.caniuse.com/">Can I use... Support tables for HTML5, CSS3, etc</a></li>
+            <li><a
+                    href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">Iconfont-阿里巴巴矢量图标库</a>
+            </li>
+            <li><a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">NPM镜像-NPM下载地址-NPM安装教程-阿里巴巴开源镜像站</a>
+            </li>
+            <li><a href="https://leetcode-cn.com/">力扣（LeetCode）官网 - 全球极客挚爱的技术成长平台</a></li>
+            <li><a href="https://www.babeljs.cn/">Babel 中文网 · Babel - 下一代 JavaScript 语法的编译器</a></li>
+            <li><a href="http://code.z01.com/emmet/">Emmet-HTML/CSS代码自动补全语法</a></li>
+            <li><a href="https://cn.wordpress.org/download/">下载 | WordPress.org China 简体中文</a></li>
+            <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考 -
+                    JavaScript | MDN</a></li>
+        </ul>
+    </div>
+    
+    <!-- 笔记推荐 -->
+    <div class="recommend boxshaw clearfix">
+        <h3>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zuixin"></use>
+                </svg>
+            </span>
+            <i>最新笔记</i>
+        </h3>
+        <ul>
+            <li><a href="#">微信分享链接出现config:invalid signature</a></li>
+            <li><a href="#">微信转发或分享朋友圈带缩略图、标题和描述</a></li>
+            <li><a href="#">阿里云ECS服务器无法链接FTP之端口设置方法</a></li>
+            <li><a href="#">静态页面实现微信分享带缩略图、标题和描述</a></li>
+            <li><a href="#">Discuz！论坛上传头像提示“Access denied</a></li>
+            <li><a href="#">IIS7、IIS8伪静态和301重定向文件web.confi</a></li>
+            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+            <li><a href="#">上传文件提示413 Request Entity Too Large</a></li>
+            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+            <li><a href="#">如何用.htaccess文件实现index.html跳</a></li>
+        </ul>
+        <!-- 资源推荐 -->
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马蜂窝 - 首页 | 发现更美好的世界</title>
+    <meta title="keywords" content="旅游，攻略，省钱，舒心，机票，邮寄，马蜂窝" />
+    <meta title="description" content="马蜂窝旅行网是一个专注于让用户省钱又舒心的网站。">
+    <link rel="icon" href="favicon.png">
+    <style lang="less" scoped>
+        /* 清除浮动 */
+        .cl::after {
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* -------------------------------第一部分---------------------------------------------- */
+        /* 顶部导航栏背景阴影 */
+        .header {
+            height: 57px;
+            border-bottom: 1px solid #D6D6D6;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
+        }
+
+        .header .inner {
+            width: 1000px;
+            height: 57px;
+            margin: 0 auto;
+        }
+
+        /* 导航条左侧logo图标 */
+        .header .inner .logo {
+            float: left;
+            width: 120px;
+            padding-top: 13px;
+            margin-right: 41px;
+            background-color: #fff;
+        }
+
+        .header .inner .logo a h1 {
+            padding-top: 30px;
+            width: 120px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .header .inner .logo a {
+            display: block;
+            width: 120px;
+            height: 30px;
+            background-image: url(images/logo.png);
+        }
+
+        /* 导航条中间文字部分 */
+        .header .inner .nav {
+            float: left;
+        }
+
+        .header .inner .nav ul li {
+            float: left;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            list-style: none;
+        }
+
+        .header .inner .nav ul li a {
+            display: block;
+            height: 54px;
+            line-height: 54px;
+            padding: 0 16px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .header .inner .nav ul li.cur a {
+            background-color: #FF9D00;
+            color: white;
+        }
+
+        .header .inner .nav ul li.cur {
+            border-top: 2px solid #FF9D00;
+            border-bottom: 2px solid #FF9D00;
+        }
+
+        .header .inner .nav ul li.top_bk:hover {
+            border-top: 2px solid #FF9D00;
+        }
+
+        .header .inner .nav ul li.bottom_bk:hover {
+            border-bottom: 2px solid #FF9D00;
+        }
+
+        .header .inner .nav ul li.top_bk:hover a,
+        .header .inner .nav ul li.bottom_bk:hover a {
+            color: #FF9D00;
+        }
+
+        /* 三角形制作 */
+        .header .inner .nav ul li a i {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: none;
+            border-top: 5px solid #333333;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+
+        .header .inner .nav ul li:hover a i {
+            border-top: 5px solid #FF9D00;
+        }
+
+        /* 最右侧登录盒子 */
+        .header .inner .login {
+            float: right;
+            width: 182px;
+            padding-top: 16px;
+        }
+
+        .header .inner .login .yq {
+            float: left;
+            width: 26px;
+            height: 26px;
+            margin-right: 9px;
+            background: url(images/header-sprites15.png);
+        }
+
+        .header .inner .login .weibo {
+            background-position: -0px -50px;
+        }
+
+        .header .inner .login .weibo:hover {
+            background-position: -0px -80px;
+        }
+
+        .header .inner .login .qq {
+            background-position: -30px -50px;
+        }
+
+        .header .inner .login .qq:hover {
+            background-position: -30px -80px;
+        }
+
+        .header .inner .login .weixin {
+            background-position: -0px -165px;
+        }
+
+        .header .inner .login .weixin:hover {
+            background-position: -30px -165px;
+        }
+
+        .header .inner .login .wz {
+            text-decoration: none;
+            color: #FF9D00;
+            font-size: 12px;
+            line-height: 26px;
+        }
+
+        .header .inner .login .dl {
+            padding-right: 10px;
+            border-right: 1px solid #C9C9C9;
+            margin-right: 10px;
+            height: 14px;
+        }
+
+        /* -------------------------------第二部分---------------------------------------------- */
+        /* ---轮播图--- */
+        .banner {
+            position: relative;
+            height: 500px;
+        }
+
+        .banner .datu li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .banner .datu li img {
+            width: 1600px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -800px;
+        }
+
+        .banner .xiaotu {
+            position: absolute;
+            top: 45px;
+            right: 230px;
+            width: 40px;
+            height: 400px;
+        }
+
+        .banner .xiaotu li {
+            margin-bottom: 15px;
+            list-style: none;
+        }
+
+        .banner .wztime {
+            width: 1000px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            top: 50px;
+            left: 0;
+            color: white;
+        }
+
+        .banner .wztime .shijian .ri {
+            font-size: 40px;
+        }
+
+        .banner .wztime .shijian .yue {
+            font-size: 26px;
+        }
+
+        .banner .wztime .shijian .nian {
+            font-size: 26px;
+        }
+
+        .banner .wztime .plan {
+            font-size: 26px;
+            padding-left: 10px;
+        }
+
+        /* 搜索框背景 */
+        .banner .ssk {
+            width: 518px;
+            height: 58px;
+            padding: 15px 10px;
+            background-color: rgba(0, 0, 0, .6);
+            position: absolute;
+            top: 350px;
+            left: 50%;
+            margin-left: -269px;
+            border-radius: 6px;
+        }
+
+        .banner .ssk .top i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(images/header-sprites15.png) no-repeat -60px -110px;
+            vertical-align: middle;
+            margin-right: 3px;
+            position: relative;
+            top: -1px;
+        }
+
+        .banner .ssk .top i.cur {
+            background-position: -60px -140px;
+        }
+
+        .banner .ssk .top span {
+            color: white;
+            line-height: 16px;
+            margin-right: 15px;
+        }
+
+        .banner .ssk .bottom {
+            margin-top: 8px;
+        }
+
+        .banner .ssk .bottom .baisekk {
+            float: left;
+            width: 474px;
+            height: 36px;
+            background-color: white;
+            margin-right: 4px;
+            border-radius: 4px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .banner .ssk .bottom .baisekk input {
+            width: 460px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            height: 34px;
+            line-height: 34px;
+        }
+
+        .banner .ssk .bottom .anniu {
+            float: left;
+            width: 40px;
+            height: 36px;
+            background-size: 40px;
+            background-image: url(images/tubiao.png);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* -------------------第三部分,专栏和爆款 ------------------------------*/
+        .zhuanlanhebaokuan {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 导航框框部分 */
+        .zhuanlanhebaokuan .daohangkk {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a {
+            width: 134px;
+            height: 50px;
+            padding-top: 8px;
+            margin: 0px 1px;
+            display: inline-block;
+            border: 0.5px solid #e5e5e5;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            background: url(images/sprites.png);
+            background-repeat: no-repeat;
+            background-size: 104px auto;
+            vertical-align: middle;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.zyx {
+            background-position: 60px -651px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.gty {
+            background-position: 60px -24px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.ddy {
+            background-position: 60px -129px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.jp {
+            background-position: 60px -441px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.djd {
+            background-position: 60px -546px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.qz {
+            background-position: 60px -335px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a.yl {
+            background-position: 60px -233px;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a .wz {
+            width: 100px;
+            height: 45px;
+            text-align: left;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a .dazi {
+            display: inline-block;
+            padding-left: 8px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+
+        .zhuanlanhebaokuan .daohangkk a .xiaozi {
+            padding-top: 1px;
+            padding-left: 8px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 11px;
+            color: #9d9d9d;
+        }
+
+        /* 专栏部分 */
+        .zhuanlanhebaokuan .zhuanlan {
+            float: left;
+            width: 260px;
+            margin-right: 40px;
+        }
+
+        /* 公共类 */
+        .ggbox h3 {
+            float: left;
+            line-height: 68px;
+            font-size: 20px;
+        }
+
+        .ggbox .hd {
+            overflow: hidden;
+        }
+
+        .ggbox .youce {
+            float: right;
+            line-height: 68px;
+        }
+
+        .ggbox .youce a {
+            text-decoration: none;
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .ggbox .bd .tu {
+            position: relative;
+        }
+
+        .ggbox .bd .tu ul {
+            position: absolute;
+            bottom: 8px;
+            right: 17px;
+            width: 120px;
+            height: 17px;
+        }
+
+        .ggbox .bd .tu ul li {
+            list-style: none;
+            float: left;
+            width: 20px;
+            height: 9px;
+            background-color: white;
+            margin-right: 4px;
+            border-radius: 5px;
+        }
+
+        .ggbox .bd .tu ul li.cur {
+            background-color: orange;
+        }
+
+        .ggbox .wen h4 {
+            line-height: 50px;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .ggbox .wen p {
+            line-height: 24px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* 爆款部分 */
+        .zhuanlanhebaokuan .baokuan {
+            float: left;
+            width: 700px;
+        }
+
+        .zhuanlanhebaokuan .baokuan h3 {
+            line-height: 68px;
+            font-size: 20px;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li {
+            list-style: none;
+            float: left;
+            width: 220px;
+            margin-right: 20px;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li.last {
+            margin: 0;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li img {
+            width: 220px;
+            height: 135px;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li p.tip {
+            line-height: 24px;
+            font-size: 14px;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li p.price {
+            float: right;
+            color: #FF9D00;
+            font-size: 20px;
+        }
+
+        .zhuanlanhebaokuan .baokuan ul li p.price span {
+            float: right;
+            color: #FF9D00;
+            font-size: 10px;
+            line-height: 35px;
+        }
+
+        /* -------------------第四部分,攻略和游记 ------------------------------*/
+        .gonglueheyouji {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gonglueheyouji .gonglue {
+            float: left;
+            width: 270px;
+            margin-right: 30px;
+            padding-top: 20px;
+        }
+
+        .gonglueheyouji .youji {
+            float: right;
+            width: 700px;
+        }
+
+        /* -------攻略 --------*/
+        .gonglueheyouji .gonglue .tu {
+            position: relative;
+        }
+
+        .gonglueheyouji .gonglue .tu .piaodai {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 84px;
+            height: 22px;
+        }
+
+        .gonglueheyouji .gonglue .tu .piaodai .juxing {
+            float: left;
+            width: 70px;
+            height: 22px;
+            line-height: 22px;
+            background-color: #FF6262;
+            font-size: 13px;
+            color: white;
+            text-align: right;
+        }
+
+        .gonglueheyouji .gonglue .tu .piaodai .sjx {
+            float: left;
+            width: 0;
+            height: 0;
+            border-top: 11px;
+            border-bottom: 11px;
+            border-left: 7px;
+            border-right: 7px;
+            border-style: solid;
+            border-top-color: #FF6262;
+            border-right-color: transparent;
+            border-bottom-color: #FF6262;
+            border-left-color: #FF6262;
+        }
+
+        .gonglueheyouji .gonglue .wen .lb {
+            font-size: 14px;
+        }
+
+        .gonglueheyouji .gonglue .wen .lb li {
+            list-style: none;
+            line-height: 25px;
+        }
+
+        .gonglueheyouji .gonglue .wen .lb .ren,
+        .gonglueheyouji .gonglue .wen .lb .jd {
+            color: #ff9d00;
+        }
+
+        /* -------游记 --------*/
+        .gonglueheyouji .youji .hd .hd_left {
+            float: left;
+            width: 162px;
+            height: 44px;
+            border-bottom: 3px solid orange;
+            padding-left: 8px;
+            font-size: 24px;
+            color: #ff9d00;
+            position: relative;
+        }
+
+        .gonglueheyouji .youji .hd .hd_left div.sx_box {
+            position: absolute;
+            right: 6px;
+            top: 7px;
+            width: 45px;
+            height: 20px;
+            border: 1px solid #e4e4e4;
+            font-size: 13px;
+            color: #666666;
+            padding-left: 5px;
+            line-height: 19px;
+            cursor: pointer;
+        }
+
+        .gonglueheyouji .youji .hd .hd_left div.sx_box:hover {
+            background-color: #FF9D00;
+            color: white;
+        }
+
+        .gonglueheyouji .youji .hd .hd_left div.sx_box i {
+            display: inline-block;
+            width: 11px;
+            height: 8px;
+            background: url(images/index-sprites9.png) no-repeat -0px -130px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            margin-right: 3px;
+        }
+
+        .gonglueheyouji .youji .hd .hd_left div.sx_box:hover i {
+            background: url(images/index-sprites9.png) no-repeat 0 -140px;
+        }
+
+        .gonglueheyouji .youji .hd .hd_right {
+            float: left;
+            height: 46px;
+            width: 530px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .gonglueheyouji .youji .hd .hd_right .zxfb {
+            float: left;
+            padding-left: 25px;
+            line-height: 46px;
+            font-size: 16px;
+        }
+
+        .gonglueheyouji .youji .hd .hd_right .xyj {
+            float: right;
+            position: relative;
+            background: #ff9d00;
+            width: 120px;
+            height: 36px;
+            text-align: center;
+            line-height: 36px;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .gonglueheyouji .youji .hd .hd_right .xyj:hover {
+            background-color: #FF8A00;
+        }
+
+        .gonglueheyouji .youji .hd .hd_right .xyj i {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background: url(images/index-sprites9.png) no-repeat 0 0;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            padding-left: 5px;
+            padding-right: 3px;
+        }
+
+        .gonglueheyouji .youji .bd {
+            padding-top: 100px;
+        }
+
+        .gonglueheyouji .youji .wz_box {
+            width: 700px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .gonglueheyouji .youji .wz_box .tu {
+            float: left;
+            width: 220px;
+            height: 150px;
+            margin-right: 25px;
+        }
+
+        .gonglueheyouji .youji .wz_box .tu img {
+            width: 220px;
+            height: 150px;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen {
+            float: left;
+            width: 455px;
+            height: 150px;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .tool {
+            font-size: 12px;
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .title {
+            height: 30px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen p {
+            height: 100px;
+            text-indent: 2em;
+            font-size: 14px;
+            line-height: 20px;
+            color: #656565;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .z {
+            float: left;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .z i {
+            display: inline-block;
+            position: relative;
+            top: 4px;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .z i.weizhi {
+            width: 14px;
+            height: 17px;
+            background: url(images/index-sprites9.png) no-repeat 0 -50px;
+        }
+
+        .gonglueheyouji .youji .wz_box .dby {
+            color: #666666;
+            margin-right: 10px;
+        }
+
+        .gonglueheyouji .youji .wz_box .name {
+            color: orange;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .z i.yanjing {
+            width: 18px;
+            height: 15px;
+            background: url(images/index-sprites9.png) no-repeat -30px -50px;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .y {
+            float: right;
+            line-height: 33px;
+            position: relative;
+        }
+
+        .gonglueheyouji .youji .wz_box .wen .y i.ding {
+            display: inline-block;
+            width: 37px;
+            height: 33px;
+            background: url(images/index-sprites9.png) no-repeat -60px 0;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+
+        .gonglueheyouji .youji .fanye {
+            width: 680px;
+            text-align: right;
+            padding: 20px 10px;
+            line-height: 24px;
+        }
+
+        .gonglueheyouji .youji .fanye span {
+            padding-right: 12px;
+        }
+
+        .gonglueheyouji .youji .fanye span.page {
+            padding: 0 7px;
+            background-color: #ff9d00;
+            border-radius: 4px;
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .gonglueheyouji .youji .fanye a {
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 1px;
+            margin-left: 1px;
+            padding: 0 7px;
+            border-radius: 4px;
+            color: #666;
+            vertical-align: middle;
+        }
+
+        .gonglueheyouji .youji .fanye a:hover {
+            background-color: #EFEFEF;
+            padding: 0 7px;
+            border-radius: 4px;
+        }
+
+        .gonglueheyouji .youji .fanye a.next {
+            background-color: #ff9d00;
+            padding: 0 5px;
+            border-radius: 4px;
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .gonglueheyouji .youji .fanye a:hover.next {
+            background-color: #FF8A00;
+        }
+
+        /* -------------------底部footer部分 ------------------------------*/
+        .footer {
+            margin-top: 10px;
+            background-color: #3C3C3C;
+            height: 521px;
+        }
+
+        .footer .inner {
+            width: 1000px;
+            margin: 0 auto;
+            padding-top: 35px;
+        }
+
+        .footer .inner dt {
+            font-size: 18px;
+            line-height: 30px;
+            color: #c2c2c2;
+        }
+
+        .footer .inner dd {
+            font-size: 13px;
+            line-height: 30px;
+            color: #c2c2c2;
+        }
+
+        .footer .inner dd span {
+            color: orange;
+        }
+
+        .footer .inner dd a {
+            color: #c2c2c2;
+            text-decoration: none;
+        }
+
+        .footer .inner .box1 {
+            float: left;
+            width: 240px;
+        }
+
+        .footer .inner .box2 {
+            float: left;
+            width: 214px;
+        }
+
+        .footer .inner .box3 {
+            float: left;
+            width: 200px;
+        }
+
+        .footer .inner .box3 dt {
+            text-align: center;
+        }
+
+        .footer .inner .box3 dd {
+            float: left;
+            width: 50%;
+        }
+
+        .footer .inner .box4 {
+            float: left;
+            width: 342px;
+            margin-top: 20px;
+        }
+
+        .footer .inner .box4 img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer .inner .box4 p {
+            font-size: 12px;
+            color: #c2c2c2;
+        }
+
+        .footer .inner .box4 .pic1 {
+            float: left;
+            margin-right: 20px;
+            line-height: 20px;
+        }
+
+        .footer .inner .box4 .pic2 {
+            float: left;
+            margin-right: 20px;
+            line-height: 20px;
+        }
+
+        .footer .inner .box4 .pic3 {
+            float: left;
+            line-height: 20px;
+        }
+
+        .hang1 {
+            overflow: hidden;
+            border-bottom: 1px solid red;
+            padding-bottom: 100px;
+        }
+
+        .hang2 {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .hang2 a {
+            color: #c2c2c2;
+            text-decoration: none;
+            padding-right: 10px;
+        }
+
+        /* -------------------固定提示 ------------------------------*/
+        .tips {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+        }
+
+        .tips img {
+            width: 149px;
+            height: 118px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <!-- 顶部导航条（header） -->
+        <div class="inner">
+            <!-- 顶部导航版心inner -->
+            <div class="logo">
+                <!-- 左侧logo部分 -->
+                <a href="">
+                    <h1>马蜂窝 - 专注于旅游，服务您的生活</h1>
+                </a>
+            </div>
+            <div class="nav">
+                <!-- 中间导航部分 -->
+                <ul>
+                    <li class="cur">
+                        <a href="">首页</a>
+                    </li>
+                    <li class="bottom_bk">
+                        <a href="">目的地</a>
+                    </li>
+                    <li class="bottom_bk">
+                        <a href="">旅行攻略</a>
+                    </li>
+                    <li class="top_bk">
+                        <a href="">去旅行<i></i></a>
+                    </li>
+                    <li class="bottom_bk">
+                        <a href="">机票火车票</a>
+                    </li>
+                    <li class="bottom_bk">
+                        <a href="">订酒店</a>
+                    </li>
+                    <li class="top_bk">
+                        <a href="">社区<i></i></a>
+                    </li>
+                    <li class="bottom_bk">
+                        <a href="">APP</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login">
+                <!-- 右侧登录部分 -->
+                <a class="yq weibo" href=""></a>
+                <a class="yq qq" href=""></a>
+                <a class="yq weixin" href=""></a>
+                <a class="wz dl" href="">登录</a>
+                <a class="wz zc" href="">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="banner" id="banner">
+        <ul class="datu">
+            <li class="cur">
+                <img src="images/demo1.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo2.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo5.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo4.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo3.png" alt="">
+            </li>
+        </ul>
+        <ul class="xiaotu">
+            <!-- 小图部分 -->
+            <li>
+                <img src="images/demo11.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo22.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo55.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo44.png" alt="">
+            </li>
+            <li>
+                <img src="images/demo33.png" alt="">
+            </li>
+        </ul>
+        <div class="wztime">
+            <!-- 时间文字部分 -->
+            <div class="shijian">
+                <span class="ri">20</span>
+                <span class="yue">May.</span>
+                <span class="nian">2020</span>
+            </div>
+            <div class="plan">山河远阔，尽收眼底————横穿2800公里大环线</div>
+        </div>
+        <div class="ssk">
+            <!-- 搜索框部分 -->
+            <div class="top">
+                <i class="cur"></i>
+                <span>全部</span>
+                <i></i>
+                <span>酒店</span>
+                <i></i>
+                <span>目的地</span>
+                <i></i>
+                <span>去旅行</span>
+                <i></i>
+                <span>机票</span>
+            </div>
+            <div class="bottom">
+                <div class="baisekk">
+                    <input type="text" placeholder="搜目的地/攻略/酒店/旅行特价">
+                </div>
+                <div class="anniu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="zhuanlanhebaokuan cl">
+        <!-- 专栏和爆款 -->
+        <div class="daohangkk">
+            <a class="zyx" href="">
+                <div class="wz">
+                    <div class="dazi">自由行</div>
+                    <div class="xiaozi">旅行就要更自在</div>
+                </div>
+            </a>
+            <a class="gty" href="">
+                <div class="wz">
+                    <div class="dazi">跟团游</div>
+                    <div class="xiaozi">行程透明省心游</div>
+                </div>
+            </a>
+            <a class="ddy" href="">
+                <div class="wz">
+                    <div class="dazi">当地游</div>
+                    <div class="xiaozi">最地道的玩法体验</div>
+                </div>
+
+            </a>
+            <a class="jp" href="">
+                <div class="wz">
+                    <div class="dazi">机票</div>
+                    <div class="xiaozi">特惠一折起</div>
+                </div>
+            </a>
+            <a class="djd" href="">
+                <div class="wz">
+                    <div class="dazi">订酒店</div>
+                    <div class="xiaozi">一键全网比价</div>
+                </div>
+            </a>
+            <a class="qz" href="">
+                <div class="wz">
+                    <div class="dazi">签证</div>
+                    <div class="xiaozi">出签率高服务佳</div>
+                </div>
+            </a>
+            <a class="yl" href="">
+                <div class="wz">
+                    <div class="dazi">邮轮</div>
+                    <div class="xiaozi">移动的海上城堡</div>
+                </div>
+            </a>
+        </div>
+        <div class="zhuanlan">
+            <div class="ggbox">
+                <div class="hd">
+                    <h3>旅行家专栏</h3>
+                    <div class="youce">
+                        <a href="">专栏首页</a>
+                    </div>
+                </div>
+                <div class="bd">
+                    <div class="tu">
+                        <a href="">
+                            <!-- 图片部分 -->
+                            <img src="images/11.jpeg" alt="">
+                        </a>
+                        <ul class="xiaoyuandian">
+                            <!-- 小圆点 -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li class="cur"></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="wen">
+                        <h4>夏木尼，小王子的玫瑰城市</h4>
+                        <p>夏木尼（Chamounix）是法国勃朗峰脚下最著名的小城，《小王子》里的玫瑰城市，世界登山运动的发源地。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="baokuan">
+            <h3>爆款热卖</h3>
+            <ul>
+                <li>
+                    <a href=""><img src="images/22.jpeg" alt=""></a>
+                    <p class="tip">2020/20跨年，闲逛在关西的跨年初诣游</p>
+                    <p class="price">
+                        ￥ 2510<span>起</span>
+                    </p>
+                </li>
+                <li>
+                    <a href=""><img src="images/33.jpeg" alt=""></a>
+                    <p class="tip">2019/20跨年，闲逛在关西的跨年初诣游</p>
+                    <p class="price">
+                        ￥ 2510<span>起</span>
+                    </p>
+                </li>
+                <li class="last">
+                    <a href=""><img src="images/44.jpeg" alt=""></a>
+                    <p class="tip">2019/20跨年，闲逛在关西的跨年初诣游</p>
+                    <p class="price">
+                        ￥ 2510<span>起</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="gonglueheyouji cl">
+        <!-- 攻略和游记 -->
+        <div class="gonglue">
+            <!-- 左侧攻略部分 -->
+            <div class="ggbox">
+                <div class="hd">
+                    <h3>旅游攻略推荐</h3>
+                    <div class="youce">
+                        <a href="">更多</a>
+                    </div>
+                </div>
+                <div class="bd">
+                    <div class="tu">
+                        <a href="">
+                            <!-- 图片部分 -->
+                            <img src="images/33.jpeg" alt="">
+                        </a>
+                        <div class="piaodai">
+                            <p class="juxing">自由行攻略</p>
+                            <p class="sjx"></p>
+                        </div>
+                    </div>
+                    <div class="wen">
+                        <h4>夏木尼，小王子的玫瑰城市</h4>
+                        <ul class="lb">
+                            <li>
+                                <span class="ren">Melikui</span>
+                                <span class="dpl">点评了</span>
+                                <span class="di">青羊区的</span>
+                                <span class="jd">金沙遗址博物馆</span>
+                            </li>
+                            <li>
+                                <span class="ren">Melikui</span>
+                                <span class="dpl">点评了</span>
+                                <span class="di">青羊区的</span>
+                                <span class="jd">金沙遗址博物馆</span>
+                            </li>
+                            <li>
+                                <span class="ren">Melikui</span>
+                                <span class="dpl">点评了</span>
+                                <span class="di">青羊区的</span>
+                                <span class="jd">金沙遗址博物馆</span>
+                            </li>
+                            <li>
+                                <span class="ren">Melikui</span>
+                                <span class="dpl">点评了</span>
+                                <span class="di">青羊区的</span>
+                                <span class="jd">金沙遗址博物馆</span>
+                            </li>
+                            <li>
+                                <span class="ren">Melikui</span>
+                                <span class="dpl">点评了</span>
+                                <span class="di">青羊区的</span>
+                                <span class="jd">金沙遗址博物馆</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ggbox">
+                <!--ggbox 第二栏 -->
+                <div class="hd">
+                    <h3>旅行家专栏</h3>
+                    <div class="youce">
+                        <a href="">专栏首页</a>
+                    </div>
+                </div>
+                <div class="bd">
+                    <div class="tu">
+                        <a href="">
+                            <!-- 图片部分 -->
+                            <img src="images/11.jpeg" alt="">
+                        </a>
+                        <ul class="xiaoyuandian">
+                            <!-- 小圆点 -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li class="cur"></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="wen">
+                        <h4>夏木尼，小王子的玫瑰城市</h4>
+                        <p>夏木尼（Chamounix）是法国勃朗峰脚下最著名的小城，《小王子》里的玫瑰城市，世界登山运动的发源地。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="youji">
+            <!-- 右侧游记部分 -->
+            <div class="hd">
+                <div class="hd_left">
+                    热门游记
+                    <div class="sx_box">
+                        <i></i>筛选
+                    </div>
+                </div>
+                <div class="hd_right">
+                    <div class="zxfb">最新发表</div>
+                    <div class="xyj">
+                        <i></i>写游记
+                    </div>
+                </div>
+            </div>
+            <div class="bd">
+                <div class="wz_box">
+                    <div class="tu">
+                        <a href=""><img src="images/girl1.jpg" alt=""></a>
+                    </div>
+                    <div class="wen">
+                        <div class="title">一段时光落在手心三吋长—大理日志</div>
+                        <p>已经很久没有写游记了，游记这种形式好像已经不实用了，不如当下包括窝里也在推崇的简约快时尚的小笔记、vlog...对于这个快节奏的社会更适用，但是游记的形式是我最早认识马蜂窝的样子。
+                            就...</p>
+                        <div class="tool">
+                            <div class="z">
+                                <i class="weizhi"></i>
+                                <span class="dby">日本,by</span>
+                                <i class="touxiang">
+                                    <img src="images/xtx.jpeg" alt="">
+                                </i>
+                                <span class="name">小木子</span>
+                                <i class="yanjing"></i>
+                                <span>267/2</span>
+                            </div>
+                            <div class="y">
+                                316
+                                <i class="ding"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wz_box">
+                    <div class="tu">
+                        <a href=""><img src="images/girl1.jpg" alt=""></a>
+                    </div>
+                    <div class="wen">
+                        <div class="title">一段时光落在手心三吋长—大理日志</div>
+                        <p>已经很久没有写游记了，游记这种形式好像已经不实用了，不如当下包括窝里也在推崇的简约快时尚的小笔记、vlog...对于这个快节奏的社会更适用，但是游记的形式是我最早认识马蜂窝的样子。
+                            就...</p>
+                        <div class="tool">
+                            <div class="z">
+                                <i class="weizhi"></i>
+                                <span class="dby">日本,by</span>
+                                <i class="touxiang">
+                                    <img src="images/xtx.jpeg" alt="">
+                                </i>
+                                <span class="name">小木子</span>
+                                <i class="yanjing"></i>
+                                <span>267/2</span>
+                            </div>
+                            <div class="y">
+                                316
+                                <i class="ding"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wz_box">
+                    <div class="tu">
+                        <a href=""><img src="images/girl1.jpg" alt=""></a>
+                    </div>
+                    <div class="wen">
+                        <div class="title">一段时光落在手心三吋长—大理日志</div>
+                        <p>已经很久没有写游记了，游记这种形式好像已经不实用了，不如当下包括窝里也在推崇的简约快时尚的小笔记、vlog...对于这个快节奏的社会更适用，但是游记的形式是我最早认识马蜂窝的样子。
+                            就...</p>
+                        <div class="tool">
+                            <div class="z">
+                                <i class="weizhi"></i>
+                                <span class="dby">日本,by</span>
+                                <i class="touxiang">
+                                    <img src="images/xtx.jpeg" alt="">
+                                </i>
+                                <span class="name">小木子</span>
+                                <i class="yanjing"></i>
+                                <span>267/2</span>
+                            </div>
+                            <div class="y">
+                                316
+                                <i class="ding"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wz_box">
+                    <div class="tu">
+                        <a href=""><img src="images/girl1.jpg" alt=""></a>
+                    </div>
+                    <div class="wen">
+                        <div class="title">一段时光落在手心三吋长—大理日志</div>
+                        <p>已经很久没有写游记了，游记这种形式好像已经不实用了，不如当下包括窝里也在推崇的简约快时尚的小笔记、vlog...对于这个快节奏的社会更适用，但是游记的形式是我最早认识马蜂窝的样子。
+                            就...</p>
+                        <div class="tool">
+                            <div class="z">
+                                <i class="weizhi"></i>
+                                <span class="dby">日本,by</span>
+                                <i class="touxiang">
+                                    <img src="images/xtx.jpeg" alt="">
+                                </i>
+                                <span class="name">小木子</span>
+                                <i class="yanjing"></i>
+                                <span>267/2</span>
+                            </div>
+                            <div class="y">
+                                316
+                                <i class="ding"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fanye">
+                <span>共33页 / 385条</span>
+                <span class="page">1</span>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a class="next" href="">下一页 >></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- 底部footer部分 -->
+        <div class="inner">
+            <div class="hang1">
+                <div class="box1">
+                    <dl>
+                        <dt>马蜂窝旅游网</dt>
+                        <dd>中国年轻一代用得更多的旅游网站</dd>
+                        <dd>上亿旅行者共同打造的"旅行神器"</dd>
+                        <dd><span>60,000 </span>多个全球旅游目的地</dd>
+                        <dd><span>60,000 </span>个细分目的地新玩法</dd>
+                        <dd><span>760,000,000 </span>次攻略下载</dd>
+                        <dd><span>38,000 </span>家旅游产品供应商</dd>
+                    </dl>
+                </div>
+                <div class="box2">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="">旅游网站</a></dd>
+                        <dd><a href="">旅游网站</a></dd>
+                        <dd><a href="">旅游网站</a></dd>
+                        <dd><a href="">旅游网站</a></dd>
+                        <dd><a href="">旅游网站</a></dd>
+                        <dd><a href="">旅游网站</a></dd>
+                    </dl>
+                </div>
+                <div class="box3">
+                    <dl>
+                        <dt>旅行服务</dt>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                        <dd><a href="">旅行服务</a></dd>
+                    </dl>
+                </div>
+                <div class="box4">
+                    <div class="pic1">
+                        <p><img src="images/qr_mfw4.gif" alt=""></p>
+                        <p>马蜂窝APP<br>扫描立即下载</p>
+                    </div>
+                    <div class="pic2">
+                        <p><img src="images/qr_mfw4.gif" alt=""></p>
+                        <p>马蜂窝旅游<br>订阅号</p>
+                    </div>
+                    <div class="pic3">
+                        <p><img src="images/qr_mfw4.gif" alt=""></p>
+                        <p>马蜂窝良品<br>官方服务号</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hang2">
+                <p>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                    <a href="">马可波罗</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="tips cl">
+        <!-- 固定提示部分 -->
+        <img src="images/fixed.png" alt="固定提示">
+    </div>
+
+    <!-- 下面的程序是为了让ID为banner的盒子有一个高度，因为bnner这个盒子里的li绝对定位，没有了高度 -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        // 下面的程序是实现呼吸轮播的
+        // 我们给xiaotu里的li添加监听，监控这个li有没有被点击
+        $(".xiaotu li").click(function () {
+            // 被点击的那个li标签加上cur属性，它的兄弟们都去掉cur类名
+            $(this).addClass('cur').siblings().removeClass('cur')
+            // 你点击的小图第几个，大图都淡入，它的兄弟们都淡出
+            $(".datu li").eq($(this).index()).fadeIn().siblings().fadeOut();
+        });
+
+        $(".top i").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+        });
+    </script>
+</body>
+
+</html>

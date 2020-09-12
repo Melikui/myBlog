@@ -1,0 +1,121 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "218135",
+      "name": "淘公仔",
+      "font_class": "taogongzi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "879105",
+      "name": "星星",
+      "font_class": "icon",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "2795812",
+      "name": "照片 拍照",
+      "font_class": "zhaopianpaizhao",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "3141397",
+      "name": "左箭头",
+      "font_class": "arrow-left-copy",
+      "unicode": "e511",
+      "unicode_decimal": 58641
+    },
+    {
+      "icon_id": "3497326",
+      "name": "下箭头",
+      "font_class": "arrowdown",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "3684711",
+      "name": "下箭头",
+      "font_class": "icon1",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    },
+    {
+      "icon_id": "4880556",
+      "name": "左箭头",
+      "font_class": "left",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "6446311",
+      "name": "购物车",
+      "font_class": "tianchongxing-",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "6952961",
+      "name": "右三角形",
+      "font_class": "yousanjiaoxing",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "7395236",
+      "name": "菜单",
+      "font_class": "toggle",
+      "unicode": "e5d1",
+      "unicode_decimal": 58833
+    },
+    {
+      "icon_id": "12154988",
+      "name": "二维码",
+      "font_class": "qrcode1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12756551",
+      "name": "脸 笑脸 满意-3",
+      "font_class": "lianxiaolianmanyi-",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "12777620",
+      "name": "下箭头",
+      "font_class": "arrow",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "13027619",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "13258508",
+      "name": "下箭头",
+      "font_class": "arrow1",
+      "unicode": "e50d",
+      "unicode_decimal": 58637
+    },
+    {
+      "icon_id": "14164292",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    }
+  ]
+}

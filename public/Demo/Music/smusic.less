@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix::before,
+ .clearfix::after{
+     content: '';
+     display: table;
+     clear: both;
+ }
+ html, body{
+     width: 100%;
+     height: 100%;
+     background-image: url(./images/mbg1.jpg);
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+ }
+
+// ----------------------------
+
+
+
+
+// -----------------------------
+#music{
+    width: 100%;
+    height: 100%;
+    .Show{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+        display: block;
+        z-index: 1;
+        .video{
+            position: absolute;
+            width: 700px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            margin-left: -350px;
+            margin-top: -200px;
+            overflow: hidden;
+            z-index: 3;
+            video{
+                width: 700px;
+                height: 400px;
+                position: absolute;
+                z-index: 10;
+            }
+        }
+    }
+    .isShow{
+        display: none;
+    }
+    .main {
+        width: 800px;
+        height: 500px;
+        margin: 10px auto;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -400px;
+        margin-top: -250px;
+        .header{
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            h3{
+                width: 300px;
+                height: 60px;
+                line-height: 60px;
+                padding: 0 20px;
+                color: #fff;
+            }
+            .search{
+                width: 320px;
+                height: 60px;
+                padding: 0 10px;
+                line-height: 60px;
+                text-align: center;
+                input{
+                    width: 200px;
+                    height: 30px;
+                    line-height: 30px;
+                    outline: none;
+                    border: none;
+                    padding: 0 10px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    color: #fff;
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+                button {
+                    width: 60px;
+                    height: 30px;
+                    outline: none;
+                    line-height: 30px;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    border: none;
+                    cursor: pointer;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .container{
+            width: 100%;
+            height: 399px;
+            background-color: rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            .leftList{
+                padding: 5px;
+                float: left;
+                height: 400px;
+                width: 190px;
+                // background-color: #bfa;
+                display: flex;
+                justify-content: space-around;
+                align-content: flex-start;
+                overflow: auto;
+                ul li{
+                    width: 170px;
+                    height: 30px;
+                    margin: 5px 0;
+                    color: #fff;
+                    line-height: 30px;
+                    padding: 0 5px;
+                    border-radius: 10px;
+                    font-size: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    overflow: hidden;
+                    a{
+                        display: inline-block;
+                        width: 20px;
+                        height: 23px;
+                        vertical-align: middle;
+                    }
+                    .iconPause{
+                        background-image: url(./images/music_icons.png);
+                        background-size: 206px;
+                        background-position: -186px -22px;
+                    }
+                    .iconPlay{
+                        background-position: -166px -22px;
+                    }
+                    span.mvicon a{
+                        height: 20px;
+                        width: 20px;
+                        background-image: url(./images/music_icons.png);
+                        background-size: 180px;
+                        background-position: -81px 1px;
+                    }
+                    span.singName{
+                        // background-color: #bfa;
+                        width: 110px;
+                        line-height: 30px;
+                        white-space: nowrap;   /* 让文本失去换行功能 */
+                        overflow: hidden;   /* 溢出部分隐藏 */
+                        text-overflow: ellipsis;   /* 溢出部分打点 */
+                    }
+                    span.mvicon{
+                        width: 20px;
+                        line-height: 30px;
+                        color: #000;
+                    }
+                }
+                ul li:nth-child(2n){
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                ul li:nth-child(2n+1){
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+            .leftList::-webkit-scrollbar{  
+                width: 3px;  
+                height: 110px;  
+                background-color: rgba(0, 0, 0, 0.1);  
+            }
+            .leftList::-webkit-scrollbar-track{    
+                border-radius: 10px;  
+                background-color: rgba(0, 0, 0, 0.1);  
+            }  
+            .leftList::-webkit-scrollbar-thumb{  
+                border-radius: 10px;    
+                background: rgba(0,0,0,0.4);
+            } 
+            .leftList::-webkit-scrollbar-thumb:hover{
+                border-radius: 5px;
+                background-color: #4295f5; 
+            }
+            .rightMsg{
+                height: 400px;
+                width: 199px;
+                float: right;
+                border-left: 1px solid rgba(0, 0, 0, 0.3);
+                // background-color: rgba(0, 0, 0, 0.1);  
+                h3{
+                    padding: 10px;
+                    color: rgb(53, 1, 53);
+                }
+                .comments{
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    dl{
+                        padding: 10px;
+                        // background-color: #bfa;
+                        img{
+                            float: left;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                        }
+                        dd{
+                            margin-left: 40px;
+                            padding: 2px;
+                        }
+                        dd.name{
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: rgb(6, 63, 117);
+                        }
+                        dd.detail{
+                            font-size: 11px;
+                            color: #000;
+                        }
+                    }
+                }
+                .comments::-webkit-scrollbar{  
+                    width: 3px;  
+                    height: 110px;  
+                    background-color: rgba(0, 0, 0, 0.1);  
+                }
+                .comments::-webkit-scrollbar-track{    
+                    border-radius: 10px;  
+                    background-color: rgba(0, 0, 0, 0.1);  
+                }  
+                .comments::-webkit-scrollbar-thumb{  
+                    border-radius: 10px;    
+                    background: rgba(0,0,0,0.4);
+                } 
+                .comments::-webkit-scrollbar-thumb:hover{
+                    border-radius: 5px;
+                    background-color: #4295f5; 
+                }
+            }
+            .center{
+                width: 400px;
+                height: 400px;
+                margin-left: 200px;
+                // background-color: #fff;
+                position: relative;
+                @keyframes xuanzhuan {
+                    0% {
+                        transform: rotateZ(0deg);
+                    }
+                
+                    100% {
+                        transform: rotateZ(360deg);
+                    }
+                }
+                .Cover{
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid red;
+                    position: absolute;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -150px;
+                    margin-top: -150px;
+                    animation: xuanzhuan 3s linear infinite paused;
+                    transform: center;
+                    transition: all 0.3s linear;
+                    img.musicCover{
+                        width: 300px;
+                        height: 300px;
+                        text-align: center;
+                    }
+                }
+                .isPlaying{
+                    animation: xuanzhuan 3s linear infinite running;
+                }
+            }
+        }
+        .footer{
+            width: 100%;
+            height: 40px;
+            audio{
+                width: 100%;
+                height: 40px;
+                outline: none;
+                background-color: #F1F3F4;
+            }
+        }
+    }
+}
+
+    

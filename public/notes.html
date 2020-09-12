@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/images/smiley.gif">
+    <title>我的笔记</title>
+    <script src="/public/font/iconfont.js"></script>
+    <script src="/public/js/jQuery.js"></script>
+    
+    <link rel="stylesheet" href="/public/meditor/css/editormd.css" />
+    <script src="/public/meditor/editormd.min.js"></script>
+    <link rel="stylesheet" href="/public/css/index.css">
+
+</head>
+
+
+
+<body>
+    <!------------------------------------------------------------------------------------------------->
+    <!-- header顶部页头 -->
+
+    <!-- article区域 -->
+    <article id="container" class="layer clearfix">
+        <!-- article区域-左侧--部分 -->
+        <div class="leftBox boxshaw fl clearfix">
+
+            <div id="markdownBody" class="markdown-body editormd-preview-container">
+
+                <p><h3 id="h3--1-"><a name="（1）强制推送（慎用，除非你认为其他冲突等可以丢弃 或者不是很重要）" class="reference-link"></a><span class="header-link octicon octicon-link"></span>（1）强制推送（慎用，除非你认为其他冲突等可以丢弃 或者不是很重要）</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="lang-javascript"><span class="pln">git push </span><span class="pun">--</span><span class="pln"> force</span></code></li></ol></pre>
+                    <h3 id="h3--2-"><a name="（2）创建文件等小命令" class="reference-link"></a><span class="header-link octicon octicon-link"></span>（2）创建文件等小命令</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="lang-javascript"><span class="pln">touch a </span><span class="com">// 创建一个a文件</span></code></li><li class="L1"><code class="lang-javascript"><span class="pln">echo </span><span class="str">'1234'</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> a</span><span class="pun">.</span><span class="pln">txt </span><span class="com">// 把1234这个内容放入a文件</span></code></li><li class="L2"><code class="lang-javascript"><span class="pln">cat a</span><span class="pun">.</span><span class="pln">txt </span><span class="com">// 打开a文件 读取出a文件中的内容</span></code></li><li class="L3"><code class="lang-javascript"><span class="pln">mkdir test </span><span class="com">// 创建test文件夹</span></code></li><li class="L4"><code class="lang-javascript"><span class="pln">rm </span><span class="pun">文件名</span><span class="pln"> </span><span class="com">// 删除文件</span></code></li><li class="L5"><code class="lang-javascript"><span class="pln">pwd </span><span class="com">// 打印当前工作路径</span></code></li></ol></pre>
+                    <h3 id="h3--3-git-git-bash-git-gui-git-gui-sourcetree-"><a name="（3）安装git的时候 都会安装git bash和git GUI 我们完全也可以使用git GUI来提交版本 与sourcetree等功能相同" class="reference-link"></a><span class="header-link octicon octicon-link"></span>（3）安装git的时候 都会安装git bash和git GUI 我们完全也可以使用git GUI来提交版本 与sourcetree等功能相同</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="lang-javascript"><span class="pln">gitk </span><span class="com">// 用git命令快速打开git GUI</span></code></li></ol></pre>
+                    <h3 id="h3--4-"><a name="（4）文件信息" class="reference-link"></a><span class="header-link octicon octicon-link"></span>（4）文件信息</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="lang-javascript"><span class="pln">ls </span><span class="com">// 查看当前路径下面的所有文件名</span></code></li><li class="L1"><code class="lang-javascript"><span class="pln">ls </span><span class="pun">文件夹名</span><span class="pln"> </span><span class="com">// 查看对应文件夹中的内容</span></code></li><li class="L2"><code class="lang-javascript"><span class="pln">ls </span><span class="pun">-</span><span class="pln">l </span><span class="com">// 拉出最近git提交记录以及对应修改的文件名</span></code></li><li class="L3"><code class="lang-javascript"><span class="pln">ls </span><span class="pun">-</span><span class="pln">l </span><span class="pun">-</span><span class="pln">a </span><span class="com">// 拉出最近git提交记录以及对应修改的文件名，隐藏的文件也会显示</span></code></li></ol></pre>
+                    <h3 id="h3--5-cd-"><a name="（5）cd快速切换路径" class="reference-link"></a><span class="header-link octicon octicon-link"></span>（5）cd快速切换路径</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="lang-javascript"><span class="pln">cd </span><span class="pun">~</span><span class="pln"> </span><span class="com">// 将工作路径快速切换到root</span></code></li><li class="L1"><code class="lang-javascript"><span class="pln">cd </span><span class="pun">-</span><span class="pln"> </span><span class="com">// 将工作路径切换到上一状态</span></code></li><li class="L2"><code class="lang-javascript"><span class="pln">cd </span><span class="pun">../</span><span class="pln"> </span><span class="com">// 切回到上一个工作路径</span></code></li><li class="L3"><code class="lang-javascript"><span class="pln">cd </span><span class="pun">文件夹名</span><span class="pln"> </span><span class="com">// 进入某个目录</span></code></li><li class="L4"><code class="lang-javascript"><span class="pln">cd </span><span class="pun">/</span><span class="pln"> </span><span class="com">// 进入根目录</span></code></li></ol></pre></p>
+
+
+
+
+            </div>
+
+        </div>
+
+        <!-- article区域--右侧--部分 -->
+        <div class="rightBox fr">
+
+            <!-- 搜索和导航栏目 -->
+            <div class="search-nav boxshaw clearfix">
+                <div class="top">
+                    <input type="text" placeholder="JavaScript"><button class="btn">搜 索</button>
+                </div>
+                <!------- 笔记分类 ------->
+                <!-- Git笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>Git&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">Git常用命令</a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">Git基本操作</a></li>
+                </ul>
+                <!-- webpack笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>webpack&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">开发环境配置</a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">生产环境配置</a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">优化环境配置</a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">配置详解</a></li>
+                </ul>
+                <!-- HTML笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>HTML&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                </ul>
+                <!-- CSS笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>CSS&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')">0000</a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                    <li><a href="#" onclick="Ajaxfun('./note/Git常用命令.md')"></a></li>
+                </ul>
+
+
+
+
+
+            </div>
+
+            <div class="recommend boxshaw clearfix">
+                <!-- 工具推荐 -->
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-jian"></use>
+                        </svg>
+                    </span>
+                    <i>工具推荐</i>
+                </h3>
+                <ul>
+                    <li><a href="https://www.npmjs.cn/">npm 中文文档 | npm 中文网</a></li>
+                    <li><a href="https://tool.lu/favicon/">favicon制作 - 在线工具</a></li>
+                    <li><a href="http://www.aigei.com/">爱给网_音效配乐_3D模型_视频素材_游戏素材_免费下载</a></li>
+                    <li><a href="https://www.caniuse.com/">Can I use... Support tables for HTML5, CSS3, etc</a></li>
+                    <li><a
+                            href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">Iconfont-阿里巴巴矢量图标库</a>
+                    </li>
+                    <li><a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">NPM镜像-NPM下载地址-NPM安装教程-阿里巴巴开源镜像站</a>
+                    </li>
+                    <li><a href="https://leetcode-cn.com/">力扣（LeetCode）官网 - 全球极客挚爱的技术成长平台</a></li>
+                    <li><a href="https://www.babeljs.cn/">Babel 中文网 · Babel - 下一代 JavaScript 语法的编译器</a></li>
+                    <li><a href="http://code.z01.com/emmet/">Emmet-HTML/CSS代码自动补全语法</a></li>
+                    <li><a href="https://cn.wordpress.org/download/">下载 | WordPress.org China 简体中文</a></li>
+                    <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考 -
+                            JavaScript | MDN</a></li>
+                </ul>
+                <!-- 笔记推荐 -->
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zuixin"></use>
+                        </svg>
+                    </span>
+                    <i>最新笔记</i>
+                </h3>
+                <ul>
+                    <li><a href="#">微信分享链接出现config:invalid signature</a></li>
+                    <li><a href="#">微信转发或分享朋友圈带缩略图、标题和描述</a></li>
+                    <li><a href="#">阿里云ECS服务器无法链接FTP之端口设置方法</a></li>
+                    <li><a href="#">静态页面实现微信分享带缩略图、标题和描述</a></li>
+                    <li><a href="#">Discuz！论坛上传头像提示“Access denied</a></li>
+                    <li><a href="#">IIS7、IIS8伪静态和301重定向文件web.confi</a></li>
+                    <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+                    <li><a href="#">上传文件提示413 Request Entity Too Large</a></li>
+                    <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+                    <li><a href="#">如何用.htaccess文件实现index.html跳</a></li>
+                </ul>
+                <!-- 资源推荐 -->
+            </div>
+
+
+        </div>
+    </article>
+
+
+
+
+
+    <!-- footer底部页脚部分 -->
+    <!------------------------------------------------------------------------------------------------->
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block main %}
+<!-- 留言部分 -->
+<div class="liuyan">
+    <p class="ly-p">昵称：<span class="nickname"></span></p>
+    <input type="text" id="nickName" required />
+    <p class="ly-p">留言：<span class="msgtips"></span></p>
+    <textarea
+        type="text"
+        rows="10"
+        cols="30"
+        id="msgContent"
+        required
+    ></textarea>
+    <p class="ly-p">
+        <input type="submit" id="saveMsg" value="提交留言" /><span
+            class="lyTips"
+        ></span>
+    </p>
+</div>
+<!-- 留言版部分 -->
+<div class="liuyanban">
+    <h3>留&nbsp;言&nbsp;板</h3>
+    <div class="ly-content" id="mr-cont">
+        <dl class="datalist" id="datalist">
+            {% for message in messages %}
+            <div class="divlist">
+                <dt>{{ message.nickname }}</dt>
+                <dd>{{ message.msg }}</dd>
+                <tt>{{ message.time }}</tt>
+            </div>
+            {% endfor %}
+        </dl>
+    </div>
+</div>
+<script src="/public/js/liuyan.js"></script>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+{% block main %}
+<!-- article区域-左侧--部分 -->
+<div class="leftBox fl clearfix">
+
+    <!-- 中间博客部分 -->
+    <div class="bloglist boxshaw clearfix">
+        <h2 class="title">最新博文</h2>
+        <ul>
+            <li>
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-ding2"></use>
+                        </svg>
+                    </span>
+                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a>
+                </h3>
+                <span>
+                    <img src="/public/images/user5.jpg" alt="">
+                </span>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus
+                    ea quo dicta eaque omnis dolore explicabo accusamus debitis natus sunt harum, impedit ex
+                    reiciendis delectus quas praesentium quaerat rem assumenda, facere molestiae. Error
+                    quibusdam est ducimus quam minus, dicta excepturi quae corporis. Quia, explicabo. Ipsum
+                    incidunt facere inventore molestiae esse obcaecati odio, ex voluptates nemo suscipit
+                    quibusdam, reprehenderit dolorem alias magni. Neque mollitia est earum magnam. Tenetur earum
+                    ea consequatur repudiandae voluptas, neque exercitationem mollitia architecto id, provident
+                    et accusamus at rem dolor minus voluptates. Rem inventore dolores repellat officia. A ipsum
+                    distinctio nulla cumque doloremque, repudiandae odio ratione!</p>
+                <p class="user">
+                    <i><a href="#"><img src="/public/images/lk.jpg" alt="头像"></a></i>
+                    <span class="time">2020-6-30</span>
+                    <!-- 收藏 -->
+                    <span>【<a href="">个人博客</a>】</span>
+                    <span class="like common"><a href="#" title="收藏">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-soucangdianji"></use>
+                            </svg>(666)
+                        </a></span>
+                    <!-- 评论 -->
+                    <span class="pinglun common"><a href="#" title="评论">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-liuyan2"></use>
+                            </svg>(999)
+                        </a></span>
+                    <!-- 点赞 -->
+                    <span class="zan common"><a href="#" title="点赞">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-tuijian"></use>
+                            </svg>
+                        </a>(333)</span>
+                    <a href="#" class="btn fr"><span>展开阅读</span></a>
+                </p>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+<!-- article区域--右侧--部分 -->
+<div class="rightBox boxshaw fr">
+
+    
+
+    <div class="recommend clearfix">
+        <!-- 列表笔记 -->
+        <h3>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-ding"></use>
+                </svg>
+            </span>
+            <i>博客列表</i>
+        </h3>
+        <ul>
+            <li><a href="#">微信分享链接出现config:invalid signature</a></li>
+            <li><a href="#">微信转发或分享朋友圈带缩略图、标题和描述</a></li>
+            <li><a href="#">阿里云ECS服务器无法链接FTP之端口设置方法</a></li>
+            <li><a href="#">静态页面实现微信分享带缩略图、标题和描述</a></li>
+            <li><a href="#">Discuz！论坛上传头像提示“Access denied</a></li>
+            <li><a href="#">IIS7、IIS8伪静态和301重定向文件web.confi</a></li>
+            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+            <li><a href="#">上传文件提示413 Request Entity Too Large</a></li>
+            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+            <li><a href="#">如何用.htaccess文件实现index.html跳</a></li>
+        </ul>
+        <!-- 资源推荐 -->
+    </div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="icon" href="/public/images/smiley.gif">
+    <title>学习中的小白</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/RotatePhotos.css">
+    <script src="/public/font/iconfont.js"></script>
+
+</head>
+
+<body>
+    <!------------------------------------------------------------------------------------------------->
+    <!-- header顶部页头 -->
+    <script src="/public/js/Header.js"></script>
+
+    <!-- 中间部分 -->
+    <div class="photoBox">
+        <div class="photo">
+            <img src="/public/images/1.jpg" alt="">
+            <img src="/public/images/2.jpg" alt="">
+            <img src="/public/images/3.jpg" alt="">
+            <img src="/public/images/4.jpg" alt="">
+            <img src="/public/images/5.jpg" alt="">
+            <img src="/public/images/6.jpg" alt="">
+            <img src="/public/images/7.jpg" alt="">
+            <img src="/public/images/8.jpg" alt="">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var photoBox = document.getElementsByClassName('photoBox')[0];
+        photoBox.onmousemove = function (e) {
+            this.style.perspectiveOrigin = "" + e.pageX + "px " + e.pageY + "px";
+        }
+    </script>
+
+    <!-- footer底部页脚部分 -->
+    <script src="/public/js/Footer.js"></script>
+    <!------------------------------------------------------------------------------------------------->
+    <script src="/public/js/webrunTime.js"></script>
+    <script src="/public/js/wordsCount.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+:root,
+body {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+}
+
+.wbox{
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin:  10px auto;
+    border-radius: 10px;
+    /* background-color: #bfa; */
+    /* z-index: -1; */
+    /* overflow: hidden; */
+}
+
+.black{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background-color: #000;
+    z-index: -1;
+    /* overflow: hidden; */
+}
+.dragDiv{
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    left: 50%;
+    top: 50%;
+    margin-left: -310px;
+    margin-top: -310px;
+}
+#dragBox{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+@keyframes xuanzhuan {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+.yuanquan{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    perspective: 2000px;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-left-color: red;
+    border-right-color: blue;
+    border-top-color: green;
+    border-bottom-color: yellow;
+    animation: xuanzhuan 1s linear infinite;
+    z-index: 6;
+    transition: all 0.2s linear;
+}
+.yuanquan:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 6px rgb(255, 255, 255, 0.5),
+                0px 0px 8px 3px inset rgba(255, 255, 255, 0.6);
+}
+.wrapper {
+    animation:  10s linear infinite;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    perspective: 2000px;
+    z-index: 5;
+}
+@keyframes round {
+    0% {
+        transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+div.xbox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: round 10s linear infinite;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+    width: 300px;
+    height: 300px;
+    opacity: 0.8;
+    position: absolute;
+    transform-origin: center center;
+    display: flex;
+    flex-direction: nowrap;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 60px;
+    line-height: 300px;
+}
+
+.minbox {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+div.box1 {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: blue;
+}
+
+div.box2 {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: green;
+}
+
+div.box3 {
+    transform: rotateY(270deg) translateZ(150px);
+    background-color: cyan;
+
+}
+
+div.box4 {
+    transform: rotateY(360deg) translateZ(150px);
+    background-color: yellow;
+}
+
+div.box5 {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: rebeccapurple;
+}
+
+div.box6 {
+    transform: rotateX(90deg) translateZ(-150px);
+    background-color: red;
+}

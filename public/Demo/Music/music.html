@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./smusic.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div id="music">
+        <div class="Show" v-show="isShow" @click='hide'>
+            <div class="video">
+                <video v-bind:src="mvUrl" controls autoplay></video>
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h3>听音乐</h3>
+                <div class="search">
+                    <input v-model='query' @keyup.enter='searchMusic' type="text" placeholder="搜索歌曲"><button
+                        @click='searchMusic'>搜&nbsp;索</button>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <div class="leftList">
+                    <ul>
+                        <li v-for='(item, index) in musicList'>
+                            <a class="iconPause" :class="{ iconPlay:index==current}"  @click='plsyMusic(item.id, index)' href="#"></a>
+                            <span class="singName">{{ item.name }}</span>
+                            <span class="mvicon"><a v-if='item.mvid!=0' @click='playMv(item.mvid)' href="#"></a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightMsg">
+                    <h3>热门留言</h3>
+                    <div class="comments">
+                        <dl v-for='item in hotComments'>
+                            <dt><img :src="item.user.avatarUrl" alt=""></dt>
+                            <dd class="name">{{ item.user.nickname }}</dd>
+                            <dd class="detail">{{ item.content}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="Cover" :class='{isPlaying: isPlaying}'>
+                        <img class="musicCover" :src="musicCover" alt="歌曲封面">
+                    </div>
+                </div>
+            </div>
+            <div class="footer clearfix">
+                <audio @play='play' @pause='pause' :src="musicUrl" controls autoplay></audio>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./music.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="icon" href="/public/images/smiley.gif">
+    <title>小萌新</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <script src="/public/font/iconfont.js"></script>
+    <script src="/public/js/jQuery.js"></script>
+    <script src="/public/js/index.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- header顶部页头 -->
+    <header id="header">
+        <!-- 顶部导航栏版心区域, 1190px -->
+        <div class="container layer clearfix">
+            <!-- logo--标题--280*60 -->
+            <h1 class="logo fl"><a target="_self" href="/">Melikui</a></h1>
+            <!-- 中间导航--600*60 -->
+            <div class="navigation fl">
+                <div class="menu-fix-box fl">
+                    <ul class="clearfix">
+                        <li class="ele">
+                            <a target="_self" href="/">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-xin1"></use>
+                                </svg>&nbsp;首页</a>
+                        </li>
+                        <li class="ele">
+                            <a href="/blog"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-biji1"></use>
+                                </svg>&nbsp;博客</a>
+                        </li>
+                        <li class="ele">
+                            <a href="/notes"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-biji"></use>
+                                </svg>&nbsp;笔记</a>
+                        </li>
+                        <li class="ele">
+                            <a href="/liuyan"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-liuyan2"></use>
+                                </svg>&nbsp;留言</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-guanyu2"></use>
+                                </svg>&nbsp;关于</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-share"></use>
+                                </svg>&nbsp;友链</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧--搜索和时间轴---200*60 -->
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#" title="时间轴">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shijianzhou1"></use>
+                                </svg>
+                            </span>
+                        </a></li>
+                    <li><i>|</i></li>
+                    <li><a id="loginbtn" target="_self" href="javascript:void(0);" title="文本编辑">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shenhebijijishibenxiezi"></use>
+                                </svg>
+                            </span>
+                        </a></li>
+                    <li><i>|</i></li>
+                    <li><a href="https:www.baidu.com" title="搜索">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-soushuo"></use>
+                                </svg>
+                            </span>
+                        </a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- article区域 -->
+    <article id="container" class="layer clearfix">{% block demo %}{% endblock %}</article>
+
+    <!-- footer底部页脚部分 -->
+    <footer id="footer">
+        <div class="box layer">
+            <div class="ftop">
+                <span>
+                    <i>© 2020-3-10</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xin1"></use>
+                    </svg>
+                    <i>Melikui</i>
+                </span>
+                <span>|</span>
+                <span class="big">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tongji1"></use>
+                    </svg>
+                    <i>站点字数合计: <i id="wordCount">字数统计</i></i>
+                </span>
+                <span>|</span>
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-beian4"></use>
+                    </svg>
+                    <a target="_blank" href="http://www.beian.miit.gov.cn/">皖ICP备20009100号</a>
+                </span>
+            </div>
+            <div class="webRunTime">本站已安全运行：982 天 19 小时 26 分 57 秒</div>
+            <div class="fbottom">
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ai-user"></use>
+                    </svg>
+                    <i>999人</i>
+                </span>
+                <span>|</span>
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yanjing"></use>
+                    </svg>
+                    <i>666次</i>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- 登录框 -->
+    <div class="loginBox" style="display: none;">
+        <div class="login">
+            <ul>
+                <li><label for="user">用户名：</label><span class="userTips"></span></li>
+                <li><input id="user"name='username' type="text" placeholder="用户名或电子邮箱"></li>
+                <li><label for="password">密码：</label><span class="pwdTips"></span></li>
+                <li><input id="password" name="password" type="password" placeholder="密码"></li>
+                <li>
+                    <button class="loginbtn">登录</button>
+                    <button class="canclebtn">取消</button>
+                </li>
+            </ul>
+            <div class="loginTips"></div>
+        </div>
+    </div>
+    <script src="/public/js/webrunTime.js"></script>
+    <script src="/public/js/wordsCount.js"></script>
+</body>
+
+</html>

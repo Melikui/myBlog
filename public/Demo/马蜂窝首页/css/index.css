@@ -1,0 +1,695 @@
+ /* 清除浮动 */
+ .cl{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* body{
+    height: 5000px;
+} */
+/* -------------------------------第一部分---------------------------------------------- */
+/* 顶部导航栏背景阴影 */
+.header{
+    height: 57px;
+    border-bottom: 1px solid #D6D6D6;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
+}
+/* 顶部导航栏版心 */
+.header .inner{
+    width: 1000px;
+    height: 57px;
+    margin: 0 auto;
+}
+
+/* 导航条左侧logo图标 */
+.header .inner .logo{
+    padding-top: 13px;
+    width: 120px;
+    float: left;
+    margin-right: 41px;
+}
+.header .inner .logo a h1{
+    width: 120px;
+    /* 为了把里面的字挤走，因为写的字是给搜索引擎看的，不是给用户看的！！ */
+    height: 0px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.header .inner .logo a{
+    display: block;
+    width: 120px;
+    height: 30px;
+    background-image: url(../images/logo.png);
+}
+
+/* 导航条中间文字部分 */
+.header .inner .nav{
+    float: left;
+}
+.header .inner .nav ul li{
+    float: left;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+.header .inner .nav ul li a{
+    display: block;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333333;
+}
+.header .inner .nav ul li.cur a{
+    background-color: #FF9D00;
+    color: white;
+}
+.header .inner .nav ul li.cur a:hover{
+    background-color: #FF9D00;
+    color: white;
+}
+.header .inner .nav ul li a:hover{
+    color: #FF9D00;
+}
+.header .inner .nav ul li.cur{
+    border-top: 2px solid #FF9D00;
+    border-bottom: 2px solid #FF9D00;
+}
+.header .inner .nav ul li.top_bk:hover{
+    border-top: 2px solid #FF9D00;
+}
+.header .inner .nav ul li.top_bk:hover a{
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 0 15px;
+    height: 54px;
+}
+.header .inner .nav ul li.bottom_bk:hover{
+    border-bottom: 2px solid #FF9D00;
+}
+/* 三角形制作 */
+.header .inner .nav ul li a .sjx{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: none;
+    border-top: 5px solid #333333;
+    vertical-align: middle;
+}
+.header .inner .nav ul li a:hover .sjx{
+    
+    border-top: 5px solid #FF9D00;
+}
+
+/* 最右侧登录盒子 */
+.header .login_box{
+    float: right;
+    width: 182px;
+    padding-top: 16px;
+}
+/* 圆圈图片部分 */
+.header .login_box .yq{
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-right: 9px;
+    background: url(../images/header-sprites15.png);
+}
+.header .login_box .weibo{
+    background-position: -0px -50px;
+}
+.header .login_box .weibo:hover{
+    background-position: -0px -80px;
+}
+.header .login_box .qq{
+    background-position: -30px -50px;
+}
+.header .login_box .qq:hover{
+    background-position: -30px -80px;
+}
+.header .login_box .weixin{
+    background-position: -0px -165px;
+}
+.header .login_box .weixin:hover{
+    background-position: -30px -165px;
+}
+/* 文字部分 */
+.header .login_box .wz{
+    text-decoration: none;
+    color: #FF9D00;
+    font-size: 12px;
+    line-height: 26px;
+}
+.header .login_box .dl{
+    padding-right: 10px;
+    border-right: 1px solid #C9C9C9;
+    margin-right: 10px;
+    height: 14px;
+}
+
+/* -------------------------------第二部分---------------------------------------------- */
+/* ---轮播图--- */
+.banner{
+    position: relative;
+    height: 421px;
+}
+.banner .datu_ul li{
+    /* 为了呼吸轮播，我们的li必须摞在一起 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.banner .datu_ul li img{
+    width: 1600px;
+    height: 421px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -800px;
+}
+.banner .datu_ul li.cur{
+    display: block;
+}
+/* .banner .datu_ul li.cur{
+    display: none;
+} */
+#banner .inner_wz{
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    left: 0;
+}
+#banner .inner_wz .shijian{
+    color: white;
+    font-size: 40px;
+}
+#banner .inner_wz .shijian .rizi{
+    font-size: 40px;
+}
+#banner .inner_wz .shijian .yue{
+    font-size: 26px;
+}
+#banner .inner_wz .shijian .nian{
+    font-size: 26px;
+}
+.banner .plan{
+    color: white;
+    font-size: 26px;
+    padding-left: 10px;
+}
+.banner .xiaotu_ul{
+    position: absolute;
+    top: 15px;
+    right: 200px;
+    width: 40px;
+    height: 400px;
+}
+.banner .xiaotu_ul li{
+    margin-bottom: 10px;
+}
+/* 搜索框背景 */
+.banner .b_content{
+    width: 518px;
+    height: 58px;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    margin-left: -269px;
+    border-radius: 6px;
+}
+.banner .b_content .top i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/header-sprites15.png) no-repeat -60px -110px;
+    vertical-align: middle;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+}
+.banner .b_content i.cur{
+    background-position: -60px -140px;
+}
+.banner .b_content .top span{
+    color: white;
+    line-height: 16px;
+    margin-right: 10px;
+}
+.banner .b_content .bottom{
+    margin-top: 8px;
+}
+.banner .b_content .bottom .baisekk{
+    float: left;
+    width: 474px;
+    height: 36px;
+    background-color: white;
+    margin-right: 4px;
+    border-radius: 4px;
+    line-height: 36px;
+    text-align: center;
+}
+.banner .b_content .bottom .baisekk input{
+    width: 460px;
+    border: none;
+    outline: none;
+}
+.banner .b_content .bottom .anniu{
+    float: left;
+    width: 40px;
+    height: 36px;
+    background-size: 40px;
+    background-image: url(../images/tubiao.png);
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* -------------------第三部分,专栏和爆款 ------------------------------*/
+.zhuanlanhebaokuan{
+    width: 1000px;
+    margin: 0 auto;
+}
+/* 专栏部分 */
+.zhuanlan{
+    float: left;
+    width: 260px;
+    margin-right: 40px;
+}
+.ggbox h3{
+    line-height: 68px;
+    font-size: 20px;
+    float: left;
+}
+.ggbox .hd{
+    overflow: hidden;
+}
+.ggbox .youce{
+    float: right;
+    line-height: 68px;
+}
+.ggbox .youce a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 14px;
+}
+.ggbox .bd .tu{
+    position: relative;
+}
+.ggbox .bd .tu ul{
+    position: absolute;
+    width: 120px;
+    height: 17px;
+    bottom: 8px;
+    right: 17px;
+}
+.ggbox .bd .tu ul li{
+    float: left;
+    width: 20px;
+    height: 9px;
+    background-color: white;
+    margin-right: 4px;
+    border-radius: 5px;
+}
+.ggbox .bd .tu ul li.cur{
+    background-color: orange;
+}
+.ggbox .wen h4{
+    line-height: 65px;
+    font-size: 18px;
+    color: #333333;
+}
+.ggbox .wen p{
+    line-height: 24px;
+    font-size: 14px;
+    color: #666666;
+}
+/* 爆款部分 */
+.zhuanlanhebaokuan .baokuan{
+    float: left;
+    width: 700px;
+}
+.zhuanlanhebaokuan .baokuan h3{
+    line-height: 68px;
+    font-size: 20px;
+}
+.zhuanlanhebaokuan .baokuan ul li{
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+}
+.zhuanlanhebaokuan .baokuan ul li.last{
+    margin: 0;
+}
+.zhuanlanhebaokuan .baokuan ul li img{
+    width: 220px;
+    height: 135px;
+}
+.zhuanlanhebaokuan .baokuan ul li p.tip{
+    line-height: 24px;
+    font-size: 14px;
+}
+.zhuanlanhebaokuan .baokuan ul li .price{
+    float: right;
+    color: #FF9D00;
+    font-size: 20px;
+}
+.zhuanlanhebaokuan .baokuan ul li .price span{
+    float: right;
+    color: #FF9D00;
+    font-size: 10px;
+    line-height: 35px;
+}
+/* -------------------第四部分,攻略和游记 ------------------------------*/
+
+.gonglueheyouji{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.gonglueheyouji .gonglue{
+    float: left;
+    width: 270px;
+    margin-right: 30px;
+    padding-top: 20px;
+}
+.gonglueheyouji .youji{
+    float: right;
+    width: 700px;
+}
+/* -------攻略 --------*/
+.gonglueheyouji .tu{
+    position: relative;
+}
+.piaodai{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 84px;
+    height: 22px;
+}
+.piaodai .jx{
+    float: left;
+    width: 70px;
+    height: 22px;
+    background-color: #FF6262;
+    font-size: 13px;
+    color: white;
+    text-align: right;
+    line-height: 22px;
+}
+.piaodai .sjx{
+    float: left;
+    width: 0px;
+    height: 0px;
+    border-top: 11px;
+    border-bottom: 11px;
+    border-left: 7px;
+    border-right: 7px;
+    border-style: solid;
+    /* border-color: #FF6262; */
+    border-top-color: #FF6262;
+    border-right-color: transparent;
+    border-bottom-color: #FF6262;
+    border-left-color: #FF6262;
+}
+.lb{
+    font-size: 14px;
+}
+.lb li{
+    line-height: 25px;
+}
+.lb .ren, .lb .jd{
+    color: #ff9d00;
+}
+/* -------游记 --------*/
+.gonglueheyouji .youji .hd{
+    overflow: hidden;
+}
+.gonglueheyouji .youji .hd .hd_left{
+    float: left;
+    width: 162px;
+    height: 44px;
+    border-bottom: 3px solid orange;
+    padding-left: 8px;
+    font-size: 24px;
+    color: #ff9d00;
+    position: relative;
+}
+.gonglueheyouji .youji .hd .hd_left div.sx_box{
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    border: 1px solid #e4e4e4;
+    right: 6px;
+    top: 7px;
+    font-size: 13px;
+    color: #666666;
+    padding-left: 5px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.gonglueheyouji .youji .hd .hd_left div.sx_box:hover{
+    background-color: #e4e4e4;
+}
+.gonglueheyouji .youji .hd .hd_left div.sx_box i{
+    display: inline-block;
+    width: 11px;
+    height: 8px;
+    background: url(../images/index-sprites9.png) no-repeat -0px -130px;
+    vertical-align: middle;
+    position: relative;
+    top: -1.5px;
+}
+.gonglueheyouji .youji .hd .hd_left div.sx_box:hover i{
+    background: url(../images/index-sprites9.png) no-repeat 0 -140px;
+}
+
+.gonglueheyouji .youji .hd .hd_right{
+    float: left;
+    height: 46px;
+    width: 530px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.gonglueheyouji .youji .hd .hd_right .zxfb{
+    float: left;
+    padding-left: 25px;
+    line-height: 46px;
+    font-size: 16px;
+}
+.gonglueheyouji .youji .hd .hd_right .xyj{
+    position: relative;
+    float: right;
+    background: #ff9d00;
+    width: 120px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.gonglueheyouji .youji .hd .hd_right .xyj:hover{
+    background-color: rgb(204, 207, 11);
+}
+.gonglueheyouji .youji .hd .hd_right .xyj i{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../images/index-sprites9.png) no-repeat 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    padding-left: 5px;
+}
+
+.gonglueheyouji .youji .bd{
+    padding-top: 100px;
+}
+.gonglueheyouji .youji .wz_box{
+    width: 700px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.gonglueheyouji .youji .wz_box .tu{
+    float: left;
+    width: 220px;
+    height: 150px;
+    margin-right: 25px;
+}
+.gonglueheyouji .youji .wz_box .tu img{
+    width: 220px;
+    height: 150px;
+}
+.gonglueheyouji .youji .wz_box .wen{
+    float: left;
+    width: 455px;
+    height: 150px;
+}
+.gonglueheyouji .youji .wz_box .wen .tool{
+    font-size: 12px;
+    height: 20px;
+    vertical-align: middle;
+}
+.gonglueheyouji .youji .wz_box .wen .title{
+    height: 30px;
+    font-size: 22px;
+    line-height: 30px;
+}
+.gonglueheyouji .youji .wz_box .wen p{
+    height: 100px;
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 20px;
+    color: #656565;
+}
+.gonglueheyouji .youji .wz_box .wen .z{
+    float: left;
+}
+.gonglueheyouji .youji .wz_box .wen .z i{
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+.gonglueheyouji .youji .wz_box .wen .z i.weizhi{
+    width: 14px;
+    height: 17px;
+    background: url(../images/index-sprites9.png) no-repeat 0 -50px;
+}
+.gonglueheyouji .youji .wz_box .dby{
+    color: #666666;
+    margin-right: 10px;
+}
+.gonglueheyouji .youji .wz_box .name{
+    color: orange;
+    
+}
+.gonglueheyouji .youji .wz_box .wen .z i.yanjing{
+    width: 18px;
+    height: 15px;
+    background: url(../images/index-sprites9.png) no-repeat -30px -50px;
+}
+
+.gonglueheyouji .youji .wz_box .wen .y{
+    float: right;
+    line-height: 33px;
+    position: relative;
+}
+.gonglueheyouji .youji .wz_box .wen .y i.ding{
+    display: inline-block;
+    width: 37px;
+    height: 33px;
+    background: url(../images/index-sprites9.png) no-repeat -60px 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+
+
+
+
+
+/* -------------------底部footer部分 ------------------------------*/
+.footer{
+    margin-top: 100px;
+    background-color: #3C3C3C;
+    height: 521px;
+}
+.footer .inner{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+.footer .inner dt{
+    font-size: 18px;
+    line-height: 30px;
+    color: #c2c2c2;
+}
+.footer .inner dd{
+    font-size: 13px;
+    line-height: 30px;
+    color: #c2c2c2;
+}
+.footer .inner dd span{
+    color: orange;
+}
+.footer .inner dd a{
+    color: #c2c2c2;
+    text-decoration: none;
+}
+.footer .inner .box1{
+    float: left;
+    width: 240px;
+}
+.footer .inner .box2{
+    float: left;
+    width: 214px;
+}
+.footer .inner .box3{
+    float: left;
+    width: 200px;
+}
+.footer .inner .box3 dt{
+    text-align: center;
+}
+.footer .inner .box3 dd{
+    float: left;
+    width: 50%;
+}
+.footer .inner .box4{
+    float: left;
+    width: 342px;
+    margin-top: 20px;
+}
+.footer .inner .box4 img{
+    width: 100px;
+    height: 100px;
+}
+.footer .inner .box4 p{
+    font-size: 12px;
+    color: #c2c2c2;
+}
+.footer .inner .box4 .pic1{
+    float: left;
+    margin-right: 20px;
+    line-height: 20px;
+}
+.footer .inner .box4 .pic2{
+    float: left;
+    margin-right: 20px;
+    line-height: 20px;
+}
+.footer .inner .box4 .pic3{
+    float: left;
+    line-height: 20px;
+}
+.hang1{
+    overflow: hidden;
+    border-bottom: 1px solid red;
+    padding-bottom: 100px;
+}
+.hang2{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.hang2 a{
+    color: #c2c2c2;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+
+/* -------------------固定提示 ------------------------------*/
+.tips{
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+}
+.tips img{
+    width: 149px;
+    height: 118px;
+}
