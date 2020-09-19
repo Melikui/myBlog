@@ -8,32 +8,34 @@
     <div class="bloglist boxshaw clearfix">
         <ul>
             <li>
+                <h2 class="title">{{content.title}}</h2>
                 <!-- 左侧 图片部分 -->
-                <div class="blog_left">
-                    <img src="/public/images/dream.png" alt="">
-                </div>
-                <!-- 右侧 文字部分 -->
-                <div class="blog_right">
-                    <h2 class="title">{{content.title}}</h2>
-                    <p class="text">{{content.description}} </p>
-                    <div class="user clearfix">
-                        <img src="/public/images/lk.jpg" alt="头像">
-                        <span>{{content.user.username}}</span>
-                        <span class="time"><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-biji7"></use>
-                          </svg>发表时间：{{ content.addTime|date('Y-m-d') }}</span>
-                        <!-- 评论 -->
-                        <span>
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-liuyan2"></use>
-                                </svg> 评论数:{{content.comments.length}}</span>
-                        <!-- 浏览量 -->
-                        <span>
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-watched"></use>
-                                </svg> 浏览量:{{content.views}}</span>
+                <div class="blog_content">
+                    <div class="blog_left">
+                        <img src="/public/images/blog.jpg" alt="">
                     </div>
-                    <a class="btn" href="/view?contentid={{content.id}}"><span>展开阅读</span></a>
+                    <!-- 右侧 文字部分 -->
+                    <div class="blog_right">
+                        <p class="text">{{content.description}} </p>
+                        <div class="user clearfix">
+                            <img src="/public/images/lk.jpg" alt="头像">
+                            <span>{{content.user.username}}</span>
+                            <span class="time"><svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-biji7"></use>
+                              </svg>发表时间：{{ content.addTime|date('Y-m-d') }}</span>
+                            <!-- 评论 -->
+                            <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-liuyan2"></use>
+                                    </svg> 评论数:{{content.comments.length}}</span>
+                            <!-- 浏览量 -->
+                            <span>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-watched"></use>
+                                    </svg> 浏览量:{{content.views}}</span>
+                        </div>
+                        <a class="btn" href="/view?contentid={{content.id}}"><span>展开阅读</span></a>
+                    </div>
                 </div>
             </li>
         </ul>
