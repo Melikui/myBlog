@@ -143,17 +143,17 @@
             <span>心情</span>
             <span>成长</span>
         </div>
-        <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a></h3>
+        <h3><a href="/notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a></h3>
         <div class="rz-img clearfix">
             <ul>
-                <li><img src="/public/images/rizhi-1.jfif"></li>
-                <li><img src="/public/images/rizhi-2.jfif"></li>
-                <li><img src="/public/images/rizhi-3.jfif"></li>
-                <li><img src="/public/images/rizhi-4.jfif"></li>
-                <li><img src="/public/images/rizhi-5.jfif"></li>
-                <li><img src="/public/images/rizhi-6.jfif"></li>
-                <li><img src="/public/images/rizhi-7.jfif"></li>
-                <li><img src="/public/images/rizhi-8.jfif"></li>
+                <li><img src="/public/images/demo1.png"></li>
+                <li><img src="/public/images/demo2.jpg"></li>
+                <li><img src="/public/images/demo3.jpg"></li>
+                <li><img src="/public/images/demo4.jpg"></li>
+                <li><img src="/public/images/demo5.jpg"></li>
+                <li><img src="/public/images/demo6.jpg"></li>
+                <li><img src="/public/images/demo7.jpg"></li>
+                <li><img src="/public/images/demo8.jpeg"></li>
             </ul>
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus e
@@ -177,65 +177,69 @@
 
     </div>
 
+<!-- ------------------------------------------------------------------- -->
+
     <!-- 中间博客部分 -->
+    {%for content in contents%}
     <div class="bloglist boxshaw clearfix">
-        <h2 class="title">最新博文</h2>
         <ul>
             <li>
-                <h3>
-                    <span>
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-ding2"></use>
-                        </svg>
-                    </span>
-                    <a href="/view?contentid={{content.id}}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorem?</a>
-                </h3>
-                <span>
-                    <img src="/public/images/user5.jpg" alt="">
-                </span>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus
-                    ea quo dicta eaque omnis dolore explicabo accusamus debitis natus sunt harum, impedit ex
-                    reiciendis delectus quas praesentium quaerat rem assumenda, facere molestiae. Error
-                    quibusdam est ducimus quam minus, dicta excepturi quae corporis. Quia, explicabo. Ipsum
-                    incidunt facere inventore molestiae esse obcaecati odio, ex voluptates nemo suscipit
-                    quibusdam, reprehenderit dolorem alias magni. Neque mollitia est earum magnam. Tenetur earum
-                    ea consequatur repudiandae voluptas, neque exercitationem mollitia architecto id, provident
-                    et accusamus at rem dolor minus voluptates. Rem inventore dolores repellat officia. A ipsum
-                    distinctio nulla cumque doloremque, repudiandae odio ratione!</p>
-                <p class="user">
-                    <i><a href="#"><img src="/public/images/lk.jpg" alt="头像"></a></i>
-                    <span class="time">2020-6-30</span>
-                    <!-- 收藏 -->
-                    <span>【<a href="">个人博客</a>】</span>
-                    <span class="like common"><a href="#" title="收藏">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-soucangdianji"></use>
-                            </svg>(666)
-                        </a></span>
-                    <!-- 评论 -->
-                    <span class="pinglun common"><a href="#" title="评论">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-liuyan2"></use>
-                            </svg>(999)
-                        </a></span>
-                    <!-- 点赞 -->
-                    <span class="zan common"><a href="#" title="点赞">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-tuijian"></use>
-                            </svg>
-                        </a>(333)</span>
-                    <a href="/view?contentid={{content.id}}" class="btn fr"><span>展开阅读</span></a>
-                </p>
+                <!-- 左侧 图片部分 -->
+                <div class="blog_left">
+                    <img src="/public/images/dream.png" alt="">
+                </div>
+                <!-- 右侧 文字部分 -->
+                <div class="blog_right">
+                    <h2 class="title">{{content.title}}</h2>
+                    <p class="text">{{content.description}} </p>
+                    <div class="user clearfix">
+                        <img src="/public/images/lk.jpg" alt="头像">
+                        <span>{{content.user.username}}</span>
+                        <span class="time"><svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-biji7"></use>
+                          </svg>发表时间：{{ content.addTime|date('Y-m-d') }}</span>
+                        <!-- 评论 -->
+                        <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-liuyan2"></use>
+                                </svg> 评论数:{{content.comments.length}}</span>
+                        <!-- 浏览量 -->
+                        <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-watched"></use>
+                                </svg> 浏览量:{{content.views}}</span>
+                    </div>
+                    <a class="btn" href="/view?contentid={{content.id}}"><span>展开阅读</span></a>
+                </div>
             </li>
         </ul>
     </div>
-<!-- ------------------------------------------------------------------- -->
+    {%endfor%}
 
-
-
-
+<div class="bloglist clearfix">
+    <ul class="blogpage">
+        <li>
+            {%if page<=1 %}
+            <span>没有上一页了</span>
+            {%else%}
+            <a href="/notes/?category={{category}}&page={{page-1}}">上一页</a>
+            {%endif%}
+        </li>
+        {%if pages>0 %}
+        <li>{{page}}/{{pages}}</li>
+        {%else%}
+        <li>此分类暂无内容</li>
+        {%endif%}
+        <li>
+            {%if page>=pages %}
+            <span>没有下一页了</span>
+            {%else%}
+            <a href="/notes/?category={{category}}&page={{page+1}}">下一页</a>
+            {%endif%}
+        </li>
+    </ul>
+</div>
 <!-- ------------------------------------------------------------------ -->
-
 
 </div>
 <!-- article区域--右侧--部分 -->
@@ -304,6 +308,22 @@
             {%endfor%}
         </ul>
     </div>
+    <!-- 最新笔记 -->
+    <div class="recommend boxshaw clearfix">
+        <h3>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zuixin"></use>
+                </svg>
+            </span>
+            <i>最新笔记</i>
+        </h3>
+        <ul>
+            {%for content in contents%}
+            <li><a href="/view?contentid={{content.id}}">{{content.title}}</a></li>
+            {%endfor%}
+        </ul>
+    </div>
     <!-- 模拟练习 -->
     <div class="search-nav boxshaw clearfix">
         <!-- 小demo部分 -->
@@ -327,7 +347,7 @@
         </ul>
 
     </div>
-    
+
     <!-- 工具推荐 -->
     <div class="recommend boxshaw clearfix">
         <h3>
@@ -357,29 +377,6 @@
         </ul>
     </div>
     
-    <!-- 笔记推荐 -->
-    <div class="recommend boxshaw clearfix">
-        <h3>
-            <span>
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-zuixin"></use>
-                </svg>
-            </span>
-            <i>最新笔记</i>
-        </h3>
-        <ul>
-            <li><a href="#">微信分享链接出现config:invalid signature</a></li>
-            <li><a href="#">微信转发或分享朋友圈带缩略图、标题和描述</a></li>
-            <li><a href="#">阿里云ECS服务器无法链接FTP之端口设置方法</a></li>
-            <li><a href="#">静态页面实现微信分享带缩略图、标题和描述</a></li>
-            <li><a href="#">Discuz！论坛上传头像提示“Access denied</a></li>
-            <li><a href="#">IIS7、IIS8伪静态和301重定向文件web.confi</a></li>
-            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
-            <li><a href="#">上传文件提示413 Request Entity Too Large</a></li>
-            <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
-            <li><a href="#">如何用.htaccess文件实现index.html跳</a></li>
-        </ul>
-        <!-- 资源推荐 -->
-    </div>
+
 </div>
 {% endblock %}

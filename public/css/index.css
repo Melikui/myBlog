@@ -914,46 +914,49 @@ canvas {
     padding: 15px;
     width: 845px;
     border-radius: 3px;
-    background-color: #fff;
     margin-bottom: 15px;
 }
-.leftBox .bloglist .title{
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    padding-bottom: 5px;
-    font-weight: normal;
-    border-bottom: 1px solid #999;
-    margin-bottom: 10px;
-}
 .leftBox .bloglist ul li{
-    padding-bottom: 10px;
-    border-bottom: 1px dotted #999;
+    display: flex;
+    justify-content: space-between;
     position: relative;
 }
-
-.leftBox .bloglist ul li span img{
+.leftBox .bloglist ul li .blog_left{
     width: 250px;
-    height: 150px;
-    border-radius: 5px;
-    float: left;
-    margin: 0 10px 0 0;
-    background-color: #fff;
+    height: 160px;
 }
-.leftBox .bloglist ul li p.text{
-    height: 110px;
-    margin-left: 250px;
+.leftBox .bloglist ul li .blog_left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.leftBox .bloglist ul li .blog_right{
+    width: 580px;
+    height: 160px;
+    /* background-color: #ddd; */
+}
+
+
+.leftBox .bloglist ul li .blog_right .title{
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+}
+
+.leftBox .bloglist ul li .blog_right p.text{
+    height: 74px;
     text-indent: 2em;
-    font-size: 13px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 10px 0;
 }
-.leftBox .bloglist ul li .user{
-    margin-top: 10px;
+.leftBox .bloglist ul li .blog_right .user{
     height: 30px;
     line-height: 30px;
 }
-.leftBox .bloglist ul li .user img{
+.leftBox .bloglist ul li .blog_right .user img{
     float: left;
     border-radius: 50%;
     margin-right: 5px;
@@ -968,8 +971,8 @@ canvas {
 }
 .leftBox .bloglist ul li .btn{
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 5px;
+    bottom: 5px;
     padding: 0 10px 0 10px;
     color: #fff;
     border-radius: 6px;
@@ -1000,6 +1003,7 @@ canvas {
 .leftBox .bloglist ul li .user span a{
     color: #2988FF;
 }
+
 
 
 /* 博客页码 */
