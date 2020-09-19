@@ -934,14 +934,18 @@ canvas {
 .leftBox .bloglist ul li .blog_right{
     width: 580px;
     height: 160px;
-    /* background-color: #ddd; */
 }
 
 
 .leftBox .bloglist ul li .blog_right .title{
+    height: 30px;
     font-size: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid #999;
+    background-color: #bfa;
+    white-space: nowrap;   /* 让文本失去换行功能 */
+    overflow: hidden;   /* 溢出部分隐藏 */
+    text-overflow: ellipsis;   /* 溢出部分打点 */
 }
 
 .leftBox .bloglist ul li .blog_right p.text{
