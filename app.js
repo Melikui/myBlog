@@ -11,7 +11,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 // 加载Markdown模块
 // var markdown = require('markdown');
-var markdown = require('markdown').markdown;
+// var markdown = require('markdown').markdown;
 // 加载cookies模块
 var Cookies = require('cookies');
 // const { Cookie } = require('cookies');
