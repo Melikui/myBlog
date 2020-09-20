@@ -32,7 +32,9 @@ body {
     color: #3c3c3c;
     background-color: #fff;
 }
-
+em{
+    font-style: normal;
+}
 .layer {
     width: 1190px;
     margin: 0 auto;

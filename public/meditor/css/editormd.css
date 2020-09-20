@@ -3305,17 +3305,17 @@
 }
 
 .markdown-body h1 {
-  font-size: 30px;
+  font-size: 20px;
   color: #000;
 }
 
 .markdown-body h2 {
-  font-size: 21px;
+  font-size: 18px;
   color: rgb(129, 3, 202);
 }
 
 .markdown-body h3 {
-  font-size: 14px;
+  font-size: 16px;
   color: #272822;
 }
 
@@ -3330,7 +3330,7 @@
 }
 
 .markdown-body h6 {
-  font-size: 11px;
+  font-size: 10px;
   color:#808080;
 }
 
@@ -3457,7 +3457,7 @@
 
 .markdown-body h1 {
   padding-bottom: 0.3em;
-  font-size: 2.25em;
+  font-size: 1.8em;
   line-height: 1.2;
   border-bottom: 1px solid #eee;
 }
@@ -3468,7 +3468,7 @@
 
 .markdown-body h2 {
   padding-bottom: 0.3em;
-  font-size: 1.75em;
+  font-size: 1.6em;
   line-height: 1.225;
   border-bottom: 1px solid #eee;
 }
@@ -3478,7 +3478,7 @@
 }
 
 .markdown-body h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1.43;
 }
 
@@ -3487,7 +3487,7 @@
 }
 
 .markdown-body h4 {
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 
 .markdown-body h4 .anchor {
@@ -3495,7 +3495,7 @@
 }
 
 .markdown-body h5 {
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .markdown-body h5 .anchor {
@@ -3503,7 +3503,7 @@
 }
 
 .markdown-body h6 {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #777;
 }
 
@@ -3533,6 +3533,7 @@
 .markdown-body ul,
 .markdown-body ol {
   padding-left: 2em;
+  list-style: disc;
 }
 
 .markdown-body ul ul,
@@ -3619,6 +3620,7 @@
   font-size: 85%;
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
+  color: #e0093f;
 }
 
 .markdown-body code:before,
